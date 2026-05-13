@@ -58,6 +58,28 @@ window.FEED_DATA = {
       "tags": ["Portugal", "investment", "Coimbra", "aerospace", "tech hub"]
     },
     {
+      "id": "cs-stadler-digital-labs",
+      "date": "2026-02-19",
+      "title": "Stadler and Critical Software Launch Stadler Digital Labs (STADL) in Portugal",
+      "excerpt": "Stadler Digital Labs (STADL) has begun operations as a 51:49 joint venture between Swiss train manufacturer Stadler and Critical Software, headquartered in Coimbra and Lisbon. Starting with 100 engineers and targeting 300 by 2029, STADL combines Stadler's rolling stock expertise with Critical Software's safety-critical systems and cybersecurity heritage to deliver end-to-end railway software and digital product solutions for Stadler's global operations.",
+      "url": "https://www.railtech.com/digitalisation/2026/02/19/stadler-launches-digital-rail-lab-stadl-in-portugal-with-critical-software/",
+      "source": "RailTech.com",
+      "domain": "railway",
+      "type": "brand_mention",
+      "tags": ["Stadler Digital Labs", "STADL", "Stadler", "railway", "joint venture", "Portugal", "Coimbra", "safety-critical"]
+    },
+    {
+      "id": "cs-stadler-ceo-interview",
+      "date": "2026-02-27",
+      "title": "Stadler Digital Labs CEO: 'Software Is Shaping the Future of Trains'",
+      "excerpt": "RailTech interviews CEO Rogério Gomes, who describes Stadler Digital Labs as a 'software factory' for the global Stadler group, with digital resilience and cyber safety at its foundation. The venture aims to standardise processes, reuse software assets, and transfer Critical Software's safety-critical engineering methods into the rail sector at scale, serving Stadler's operations worldwide from Portugal.",
+      "url": "https://www.railtech.com/all/2026/02/27/this-is-something-meaningful-stadler-digital-labs-ceo-on-software-shaping-the-future-of-trains/",
+      "source": "RailTech.com",
+      "domain": "railway",
+      "type": "brand_mention",
+      "tags": ["Stadler Digital Labs", "Critical Software", "railway software", "CEO interview", "cybersecurity", "digital resilience", "Portugal"]
+    },
+    {
       "id": "ai-do178c-debate",
       "date": "2026-04-10",
       "title": "Can AI Be Used in DO-178C-Certified Aerospace Software? The Industry Debate",
@@ -78,6 +100,39 @@ window.FEED_DATA = {
       "domain": "aviation",
       "type": "industry_trend",
       "tags": ["EASA", "AI", "regulation", "certification", "Level 1", "Level 2", "2026"]
+    },
+    {
+      "id": "easa-npa-ai-trustworthiness",
+      "date": "2025-12-01",
+      "title": "EASA NPA 2025-07: First Regulatory Proposal on AI Trustworthiness for Aviation Open for Consultation",
+      "excerpt": "EASA's NPA 2025-07 launches the first formal rulemaking step for AI in aviation, introducing a trustworthiness framework aligned with EU AI Act obligations for high-risk AI systems in flight. A second NPA in 2026 will deploy the framework across specific aviation domains, with enforcement against Part 145, Part M, and Part CAMO audits beginning August 2026. Companies integrating AI into certifiable avionics products must begin aligning their assurance processes now.",
+      "url": "https://www.easa.europa.eu/en/newsroom-and-events/news/easas-first-regulatory-proposal-artificial-intelligence-aviation-now-open",
+      "source": "EASA",
+      "domain": "aviation",
+      "type": "industry_trend",
+      "tags": ["EASA", "AI", "NPA 2025-07", "trustworthiness", "EU AI Act", "rulemaking", "Part 145", "certification"]
+    },
+    {
+      "id": "easa-ai-days-2026-cologne",
+      "date": "2026-09-09",
+      "title": "EASA AI Days 2026 — September 9–10, Cologne: AI Certification and Rulemaking Updates",
+      "excerpt": "EASA hosts the 4th edition of its AI Days conference on September 9–10, 2026 in Cologne, bringing together aviation authorities, industry, and academia. The agenda covers EASA's AI Concept Paper updates, ongoing rulemaking under NPA 2025-07, and Level 1/2 AI application guidance for avionics. This is the primary regulatory networking event for companies pursuing AI integration in certified aerospace products.",
+      "url": "https://www.easa.europa.eu/en/newsroom-and-events/events/easa-artificial-intelligence-days-2026",
+      "source": "EASA",
+      "domain": "aviation",
+      "type": "industry_event",
+      "tags": ["EASA", "AI Days", "conference", "Cologne", "AI certification", "Concept Paper", "September 2026", "rulemaking"]
+    },
+    {
+      "id": "easa-epas-2026",
+      "date": "2026-01-10",
+      "title": "EASA Releases 15th Edition of European Plan for Aviation Safety (EPAS 2026)",
+      "excerpt": "EASA's 15th EPAS edition extends strategic priorities through 2026, adding three new themes: big-data technologies for safety risk management, rules simplification, and SES 2+ framework implementation. Updated Safety Risk Portfolios add new issues around in-flight fires and out-of-spec synthetic aviation fuels. The plan sets the regulatory backdrop for AI integration, autonomous systems, and digital certification methodology work across EASA and its member states.",
+      "url": "https://www.easa.europa.eu/en/newsroom-and-events/news/european-plan-aviation-safety-epas-2026",
+      "source": "EASA",
+      "domain": "aviation",
+      "type": "industry_trend",
+      "tags": ["EASA", "EPAS 2026", "aviation safety", "regulation", "big data", "SES 2+", "autonomous systems", "strategic priorities"]
     },
     {
       "id": "faa-easa-safety-conference-2026",
@@ -111,6 +166,28 @@ window.FEED_DATA = {
       "domain": "aviation",
       "type": "industry_trend",
       "tags": ["DO-326B", "DO-356A", "cybersecurity", "avionics", "safety", "certification", "attack surface"]
+    },
+    {
+      "id": "military-avionics-ai-mosa-2026",
+      "date": "2026-03-15",
+      "title": "Smarter Skies: AI and Open Architectures Are Transforming Military Avionics",
+      "excerpt": "US DoD mandates for Modular Open Systems Approach (MOSA) and the Future Airborne Capability Environment (FACE) Technical Standard are accelerating software reuse across defence platforms. AI-assisted engineering is now live on dozens of active programs, improving requirements analysis, verification coverage, and documentation consistency. The convergence of AI, DevSecOps, and model-based systems engineering is fundamentally reshaping how defence avionics software is built and sustained.",
+      "url": "https://militaryembedded.com/avionics/displays/smarter-skies-how-ai-and-open-architectures-are-changing-military-avionics",
+      "source": "Military Embedded Systems",
+      "domain": "defense",
+      "type": "industry_trend",
+      "tags": ["military avionics", "AI", "MOSA", "FACE", "open architecture", "DevSecOps", "MBSE", "defense software", "DO-178C"]
+    },
+    {
+      "id": "scsc-sss26-symposium",
+      "date": "2026-02-10",
+      "title": "Safety Critical Systems Symposium SSS'26 — Theme: AI and Safety-Critical Systems (York, UK)",
+      "excerpt": "The Safety Critical Systems Club held SSS'26 in York, UK from February 10–12, 2026, with 'AI and Safety-Critical Systems' as its central theme. The event brought together practitioners from aerospace, rail, medical, nuclear, and defence to debate standards compliance, assurance methods, and the emerging risks of integrating AI into certified systems. Proceedings and workshop materials are available through the SCSC website.",
+      "url": "https://scsc.uk/events-diary/safety-critical-systems-club-symposia/safety-critical-systems-symposium-2026",
+      "source": "Safety Critical Systems Club",
+      "domain": "aviation",
+      "type": "industry_event",
+      "tags": ["SSS'26", "safety-critical", "SCSC", "symposium", "AI", "York", "aerospace", "railway", "medtech", "2026"]
     },
     {
       "id": "iec-62304-edition2",
@@ -201,6 +278,28 @@ window.FEED_DATA = {
       "tags": ["OT", "operational technology", "cybersecurity", "energy", "ICS", "SCADA", "nation-state", "vulnerabilities"]
     },
     {
+      "id": "poland-energy-cyberattack-cisa-2026",
+      "date": "2026-02-10",
+      "title": "CISA Alert: Russia-Linked Wiper Malware Destroys OT Devices in Polish Energy Sector",
+      "excerpt": "In December 2025, threat actors attributed to Sandworm/Berserk Bear attacked Polish renewable energy plants using 'DynoWiper' malware, exploiting default FortiGate credentials to destroy RTUs, wipe HMIs, and sever control between facilities and grid operators — the first major destructive attack specifically targeting distributed energy resources (DERs). CISA issued a public alert on February 10, 2026 urging global energy operators to eliminate default ICS credentials, patch internet-facing edge devices, and enforce OT network segmentation.",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/02/10/poland-energy-sector-cyber-incident-highlights-ot-and-ics-security-gaps",
+      "source": "CISA",
+      "domain": "energy",
+      "type": "industry_trend",
+      "tags": ["CISA", "Poland", "energy", "OT", "wiper malware", "DynoWiper", "Sandworm", "RTU", "HMI", "DER", "renewable energy"]
+    },
+    {
+      "id": "iran-plc-attacks-us-critical-infrastructure",
+      "date": "2026-04-07",
+      "title": "CISA AA26-097A: Iranian APT Disrupting US Energy and Water PLCs Since March 2026",
+      "excerpt": "A joint CISA/FBI/NSA advisory warns that Iranian-affiliated threat actors (CyberAv3ngers, linked to IRGC) have been disrupting internet-facing Rockwell Automation PLCs across US government, water, and energy targets since at least March 2026, using legitimate engineering software to tamper with PLC project files and manipulate SCADA displays. The campaign marks a significant escalation from 2023 defacements of Unitronics controllers to full operational disruption of American-made ICS hardware, causing financial losses and service outages at multiple victims.",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a",
+      "source": "CISA",
+      "domain": "energy",
+      "type": "industry_trend",
+      "tags": ["Iran", "CyberAv3ngers", "IRGC", "PLC", "Rockwell Automation", "OT", "ICS", "energy", "water", "CISA", "SCADA"]
+    },
+    {
       "id": "wef-data-centre-resilience",
       "date": "2026-05-09",
       "title": "WEF: Data Centres Are Reshaping Resilience and Cybersecurity for Critical Infrastructure",
@@ -221,6 +320,39 @@ window.FEED_DATA = {
       "domain": "energy",
       "type": "industry_trend",
       "tags": ["AI", "cyberattack", "energy", "legacy infrastructure", "pipelines", "transmission", "nation-state"]
+    },
+    {
+      "id": "ot-isac-energy-risk-advisory-2026",
+      "date": "2026-05-05",
+      "title": "OT-ISAC: Energy Sector Cyber Risk Spreading Beyond Control Rooms Into Distributed Assets",
+      "excerpt": "The Operational Technology Information Sharing and Analysis Center (OT-ISAC) has issued a major advisory warning that OT exposure in the energy sector now extends far beyond traditional control rooms into distributed substations, smart meters, and renewable energy assets. The advisory cites the December 2025 Polish DER wiper attack, the April 2026 Iranian PLC disruptions, and sustained ransomware targeting of engineering workstations as evidence of a systemic shift in the OT threat landscape.",
+      "url": "https://industrialcyber.co/utilities-energy-power-water-waste/ot-isac-flags-rising-energy-sector-cyber-risk-as-ot-exposure-spreads-beyond-control-rooms-into-distributed-assets/",
+      "source": "Industrial Cyber",
+      "domain": "energy",
+      "type": "industry_trend",
+      "tags": ["OT-ISAC", "OT", "energy", "distributed energy", "cybersecurity", "DER", "substation", "renewable energy", "threat advisory"]
+    },
+    {
+      "id": "dora-financial-operational-resilience-2026",
+      "date": "2026-01-17",
+      "title": "DORA Enters Active Enforcement Phase: EU Financial Firms Must Demonstrate ICT Resilience",
+      "excerpt": "January 17, 2026 marks one year since DORA became fully applicable, and European Supervisory Authorities are now conducting active enforcement reviews across the approximately 22,000 EU financial entities in scope. Key requirements include ICT risk management frameworks, mandatory incident-reporting timelines, and direct regulatory oversight of critical third-party technology providers including cloud platforms and software vendors. Fines reach up to 10% of annual turnover or €10 million for serious breaches — making operational resilience a board-level priority.",
+      "url": "https://vantagepoint.io/blog/sf/dora-compliance-2026-what-financial-services-firms-need-to-know-about-digital-operational-resilience",
+      "source": "Vantage Point",
+      "domain": "finance",
+      "type": "industry_trend",
+      "tags": ["DORA", "Digital Operational Resilience Act", "EU", "financial services", "compliance", "ICT risk", "third-party risk", "enforcement"]
+    },
+    {
+      "id": "insurtech-ai-dora-resilience-2026",
+      "date": "2026-01-10",
+      "title": "2026 InsurTech Predictions: AI Autopilot Claims, DORA Compliance, and the End of Legacy Tolerance",
+      "excerpt": "Industry analysts predict 2026 is the year AI-powered claims automation goes mainstream in insurance, with straight-through settlement becoming standard for simple claims and 75% faster resolution times. DORA's active enforcement phase puts insurers' ICT resilience under direct regulatory scrutiny for the first time, while high-profile cloud outages in 2025 have made multi-region design and failover planning a baseline expectation. Legacy COBOL-based policy administration systems face mounting pressure as API-first, composable architectures take hold.",
+      "url": "https://www.qover.com/blog/2026-insurtech-predictions",
+      "source": "Qover",
+      "domain": "insurance",
+      "type": "industry_trend",
+      "tags": ["insurtech", "AI", "claims automation", "DORA", "resilience", "legacy systems", "COBOL", "insurance software", "2026"]
     }
   ]
 };
