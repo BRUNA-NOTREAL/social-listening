@@ -19,16 +19,17 @@
       --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
       --shadow-hover: 0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
       --radius: 8px;
-      --aerospace: #2563eb;
-      --aerospace-light: #eff6ff;
-      --automotive: #d97706;
-      --automotive-light: #fffbeb;
-      --medtech: #16a34a;
-      --medtech-light: #f0fdf4;
-      --energy: #ea580c;
-      --energy-light: #fff7ed;
-      --brand: #7c3aed;
-      --brand-light: #f5f3ff;
+
+      --aviation:   #0284c7; --aviation-light:   #e0f2fe;
+      --defense:    #475569; --defense-light:    #f1f5f9;
+      --space:      #4338ca; --space-light:      #eef2ff;
+      --automotive: #d97706; --automotive-light: #fffbeb;
+      --railway:    #dc2626; --railway-light:    #fef2f2;
+      --medtech:    #16a34a; --medtech-light:    #f0fdf4;
+      --energy:     #ea580c; --energy-light:     #fff7ed;
+      --finance:    #0d9488; --finance-light:    #f0fdfa;
+      --insurance:  #db2777; --insurance-light:  #fdf2f8;
+      --brand:      #7c3aed; --brand-light:      #f5f3ff;
     }
 
     body {
@@ -56,16 +57,8 @@
       justify-content: space-between;
       gap: 16px;
     }
-    .brand-name {
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-    }
-    .brand-sub {
-      font-size: 11px;
-      color: #94a3b8;
-      margin-top: 1px;
-    }
+    .brand-name { font-size: 17px; font-weight: 700; letter-spacing: -0.3px; }
+    .brand-sub  { font-size: 11px; color: #94a3b8; margin-top: 1px; }
     .header-badge {
       background: #1e3a5f;
       border: 1px solid #2d5a9e;
@@ -103,7 +96,7 @@
       background: var(--bg);
       color: var(--text-primary);
     }
-    .search-input:focus { border-color: #2563eb; background: white; }
+    .search-input:focus { border-color: #0284c7; background: white; }
     .search-input::placeholder { color: var(--text-muted); }
 
     .filter-row { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
@@ -114,8 +107,9 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
       margin-right: 2px;
+      white-space: nowrap;
     }
-    .filter-sep { width: 1px; height: 20px; background: var(--border); margin: 0 6px; }
+    .filter-sep { width: 1px; height: 20px; background: var(--border); margin: 0 6px; flex-shrink: 0; }
     .filter-btn {
       padding: 4px 11px;
       border-radius: 20px;
@@ -130,10 +124,16 @@
     }
     .filter-btn:hover { border-color: #94a3b8; }
     .filter-btn.active { background: #1e293b; border-color: #1e293b; color: white; }
-    .filter-btn.aerospace.active  { background: var(--aerospace); border-color: var(--aerospace); color: white; }
+
+    .filter-btn.aviation.active   { background: var(--aviation);   border-color: var(--aviation);   color: white; }
+    .filter-btn.defense.active    { background: var(--defense);    border-color: var(--defense);    color: white; }
+    .filter-btn.space.active      { background: var(--space);      border-color: var(--space);      color: white; }
     .filter-btn.automotive.active { background: var(--automotive); border-color: var(--automotive); color: white; }
+    .filter-btn.railway.active    { background: var(--railway);    border-color: var(--railway);    color: white; }
     .filter-btn.medtech.active    { background: var(--medtech);    border-color: var(--medtech);    color: white; }
     .filter-btn.energy.active     { background: var(--energy);     border-color: var(--energy);     color: white; }
+    .filter-btn.finance.active    { background: var(--finance);    border-color: var(--finance);    color: white; }
+    .filter-btn.insurance.active  { background: var(--insurance);  border-color: var(--insurance);  color: white; }
     .filter-btn.brand.active      { background: var(--brand);      border-color: var(--brand);      color: white; }
 
     /* ── Main ── */
@@ -142,12 +142,7 @@
       margin: 0 auto;
       padding: 20px 24px 48px;
     }
-    .results-meta {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      min-height: 20px;
-    }
+    .results-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; min-height: 20px; }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -168,10 +163,15 @@
     .card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
 
     .card-stripe { height: 4px; }
-    .card-stripe.aerospace  { background: var(--aerospace); }
+    .card-stripe.aviation   { background: var(--aviation); }
+    .card-stripe.defense    { background: var(--defense); }
+    .card-stripe.space      { background: var(--space); }
     .card-stripe.automotive { background: var(--automotive); }
+    .card-stripe.railway    { background: var(--railway); }
     .card-stripe.medtech    { background: var(--medtech); }
     .card-stripe.energy     { background: var(--energy); }
+    .card-stripe.finance    { background: var(--finance); }
+    .card-stripe.insurance  { background: var(--insurance); }
     .card-stripe.brand      { background: var(--brand); }
 
     .card-body {
@@ -190,33 +190,22 @@
       text-transform: uppercase;
       letter-spacing: 0.4px;
     }
-    .tag.aerospace  { background: var(--aerospace-light);  color: var(--aerospace); }
+    .tag.aviation   { background: var(--aviation-light);   color: var(--aviation); }
+    .tag.defense    { background: var(--defense-light);    color: var(--defense); }
+    .tag.space      { background: var(--space-light);      color: var(--space); }
     .tag.automotive { background: var(--automotive-light); color: var(--automotive); }
+    .tag.railway    { background: var(--railway-light);    color: var(--railway); }
     .tag.medtech    { background: var(--medtech-light);    color: var(--medtech); }
     .tag.energy     { background: var(--energy-light);     color: var(--energy); }
+    .tag.finance    { background: var(--finance-light);    color: var(--finance); }
+    .tag.insurance  { background: var(--insurance-light);  color: var(--insurance); }
     .tag.brand      { background: var(--brand-light);      color: var(--brand); }
     .tag.type       { background: #f1f5f9; color: #64748b; }
 
-    .card-title {
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1.45;
-      color: var(--text-primary);
-    }
-    .card-excerpt {
-      font-size: 13px;
-      color: var(--text-secondary);
-      line-height: 1.55;
-      flex: 1;
-    }
+    .card-title   { font-size: 14px; font-weight: 600; line-height: 1.45; color: var(--text-primary); }
+    .card-excerpt { font-size: 13px; color: var(--text-secondary); line-height: 1.55; flex: 1; }
     .keyword-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 2px; }
-    .keyword-tag {
-      font-size: 11px;
-      background: #f1f5f9;
-      color: #64748b;
-      padding: 1px 6px;
-      border-radius: 4px;
-    }
+    .keyword-tag  { font-size: 11px; background: #f1f5f9; color: #64748b; padding: 1px 6px; border-radius: 4px; }
 
     .card-footer {
       display: flex;
@@ -230,30 +219,19 @@
     .card-meta { font-size: 11px; color: var(--text-muted); }
     .card-meta strong { color: var(--text-secondary); font-weight: 600; }
     .card-link {
-      font-size: 12px;
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 600;
-      white-space: nowrap;
-      flex-shrink: 0;
+      font-size: 12px; color: #0284c7; text-decoration: none;
+      font-weight: 600; white-space: nowrap; flex-shrink: 0;
     }
     .card-link:hover { text-decoration: underline; }
 
     /* ── Empty / Error ── */
-    .no-results {
-      text-align: center;
-      padding: 64px 20px;
-      color: var(--text-muted);
-      font-size: 15px;
-      grid-column: 1 / -1;
-    }
+    .no-results { text-align: center; padding: 64px 20px; color: var(--text-muted); font-size: 15px; grid-column: 1 / -1; }
     .hidden { display: none !important; }
 
     @media (max-width: 640px) {
       .grid { grid-template-columns: 1fr; }
       .controls-inner, .main { padding-left: 16px; padding-right: 16px; }
       .header { padding: 12px 16px; }
-      .filter-sep { display: none; }
     }
   </style>
 </head>
@@ -276,10 +254,15 @@
     <div class="filter-row">
       <span class="filter-label">Domain</span>
       <button class="filter-btn active"    data-filter="domain" data-value="all">All</button>
-      <button class="filter-btn aerospace" data-filter="domain" data-value="aerospace">Aerospace</button>
+      <button class="filter-btn aviation"  data-filter="domain" data-value="aviation">Aviation</button>
+      <button class="filter-btn defense"   data-filter="domain" data-value="defense">Defense</button>
+      <button class="filter-btn space"     data-filter="domain" data-value="space">Space</button>
       <button class="filter-btn automotive" data-filter="domain" data-value="automotive">Automotive</button>
+      <button class="filter-btn railway"   data-filter="domain" data-value="railway">Railway</button>
       <button class="filter-btn medtech"   data-filter="domain" data-value="medtech">MedTech</button>
       <button class="filter-btn energy"    data-filter="domain" data-value="energy">Energy</button>
+      <button class="filter-btn finance"   data-filter="domain" data-value="finance">Finance</button>
+      <button class="filter-btn insurance" data-filter="domain" data-value="insurance">Insurance</button>
       <button class="filter-btn brand"     data-filter="domain" data-value="brand">Brand</button>
       <div class="filter-sep"></div>
       <span class="filter-label">Type</span>
@@ -287,6 +270,7 @@
       <button class="filter-btn" data-filter="type" data-value="brand_mention">Brand Mention</button>
       <button class="filter-btn" data-filter="type" data-value="industry_trend">Trend</button>
       <button class="filter-btn" data-filter="type" data-value="industry_event">Event</button>
+      <button class="filter-btn" data-filter="type" data-value="social_discussion">Social</button>
     </div>
   </div>
 </div>
@@ -299,14 +283,23 @@
 
 <script>
   const TYPE_LABELS = {
-    brand_mention: 'Brand Mention',
-    industry_trend: 'Trend',
-    industry_event: 'Event',
-    competitor: 'Competitor'
+    brand_mention:    'Brand Mention',
+    industry_trend:   'Trend',
+    industry_event:   'Event',
+    competitor:       'Competitor',
+    social_discussion:'Social'
   };
   const DOMAIN_LABELS = {
-    aerospace: 'Aerospace', automotive: 'Automotive',
-    medtech: 'MedTech', energy: 'Energy', brand: 'Brand'
+    aviation:   'Aviation',
+    defense:    'Defense',
+    space:      'Space',
+    automotive: 'Automotive',
+    railway:    'Railway',
+    medtech:    'MedTech',
+    energy:     'Energy',
+    finance:    'Finance',
+    insurance:  'Insurance',
+    brand:      'Brand'
   };
 
   let activeFilters = { domain: 'all', type: 'all' };
@@ -323,9 +316,9 @@
   }
 
   function renderCards(items) {
-    const grid = document.getElementById('grid');
-    const noRes = document.getElementById('no-results');
-    const count = document.getElementById('results-count');
+    const grid   = document.getElementById('grid');
+    const noRes  = document.getElementById('no-results');
+    const count  = document.getElementById('results-count');
     if (!items.length) {
       grid.innerHTML = '';
       noRes.classList.remove('hidden');

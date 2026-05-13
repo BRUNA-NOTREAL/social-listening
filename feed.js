@@ -9,7 +9,7 @@ window.FEED_DATA = {
       "excerpt": "Critical FlyTech has begun operations — a joint venture 51% owned by Airbus and 49% owned by Critical Software. Headquartered in Coimbra with an additional office in Lisbon, it starts with 120 employees focused on embedded software and certifiable avionics solutions, targeting 300 employees by end of 2028.",
       "url": "https://www.airbus.com/en/newsroom/press-releases/2025-11-airbus-and-critical-software-launch-joint-venture-critical-flytech",
       "source": "Airbus Newsroom",
-      "domain": "aerospace",
+      "domain": "aviation",
       "type": "brand_mention",
       "tags": ["Critical FlyTech", "Airbus", "joint venture", "avionics", "Portugal", "Coimbra"]
     },
@@ -20,7 +20,7 @@ window.FEED_DATA = {
       "excerpt": "Trade press coverage of the Critical FlyTech announcement: the JV will design and develop high-assurance, mission-critical solutions and certifiable software across avionics, cabin and connectivity systems for Airbus and affiliated companies.",
       "url": "https://aerospace-innovations.com/critical-software-and-airbus-announce-the-launch-of-critical-flytech-a-new-joint-venture-gearing-up-to-shape-the-next-generation-era-of-aerospace-technologies/",
       "source": "Aerospace Innovations",
-      "domain": "aerospace",
+      "domain": "aviation",
       "type": "brand_mention",
       "tags": ["Critical FlyTech", "Airbus", "avionics", "certifiable software", "high-assurance"]
     },
@@ -64,7 +64,7 @@ window.FEED_DATA = {
       "excerpt": "The central tension: AI models can hallucinate and lack determinism, yet the aerospace industry wants to use them to accelerate development. As Design Assurance Level rises from DAL-E to DAL-A, trust in automated tools decreases. Industry consensus: AI as a supporting assistant, not an autonomous code generator — for now.",
       "url": "https://aerospaceglobalnews.com/opinion/ai-aerospace-software-do-178c-certification/",
       "source": "Aerospace Global News",
-      "domain": "aerospace",
+      "domain": "aviation",
       "type": "industry_trend",
       "tags": ["AI", "DO-178C", "certification", "avionics", "DAL", "safety", "LLM"]
     },
@@ -75,7 +75,7 @@ window.FEED_DATA = {
       "excerpt": "EASA is progressing toward finalizing guidance for AI use in aviation at Levels 1 and 2. This will be a pivotal regulatory moment for any company working on AI-assisted avionics or flight management software. Full integration of AI into safety-critical systems remains a long-term objective.",
       "url": "https://www.eplaneai.com/news/applying-ai-in-aerospace-software-development-under-do-178c-standards",
       "source": "ePlaneAI",
-      "domain": "aerospace",
+      "domain": "aviation",
       "type": "industry_trend",
       "tags": ["EASA", "AI", "regulation", "certification", "Level 1", "Level 2", "2026"]
     },
@@ -86,7 +86,7 @@ window.FEED_DATA = {
       "excerpt": "The 2026 International Aviation Safety Conference is hosted by FAA and EASA in Chantilly, Virginia from June 16–18, 2026. Theme: 'Safety Together: Innovation, Integration, and Trust.' Key agenda items include AI, autonomous systems, and digital certification methodologies.",
       "url": "https://aerospace-innovations.com/avionics-testing-innovations-conference-2026/",
       "source": "Aerospace Innovations",
-      "domain": "aerospace",
+      "domain": "aviation",
       "type": "industry_event",
       "tags": ["FAA", "EASA", "conference", "aviation safety", "AI", "autonomous", "June 2026"]
     },
@@ -97,7 +97,7 @@ window.FEED_DATA = {
       "excerpt": "Many aerospace programs are keen to use multicore processors for performance gains, but certification complexity is high. EASA's AMC 20-193 provides guidance, and the industry is actively working to develop tooling and methodologies that can demonstrate freedom from interference across processor cores.",
       "url": "https://militaryembedded.com/avionics/safety-certification/safety-critical-cots-avionics-military-avionics-trends",
       "source": "Military Embedded Systems",
-      "domain": "aerospace",
+      "domain": "aviation",
       "type": "industry_trend",
       "tags": ["multicore", "AMC 20-193", "EASA", "certification", "avionics", "DO-178C", "COTS"]
     },
@@ -108,7 +108,7 @@ window.FEED_DATA = {
       "excerpt": "Aircraft systems are increasingly connected to external services and use third-party software, widening the attack surface. DO-326B and DO-356A are now required alongside safety standards. The convergence of safety and security is the defining challenge in modern avionics software development.",
       "url": "https://aerospace-innovations.com/strengthening-security-and-cyber-resilience-in-avionics-systems/",
       "source": "Aerospace Innovations",
-      "domain": "aerospace",
+      "domain": "aviation",
       "type": "industry_trend",
       "tags": ["DO-326B", "DO-356A", "cybersecurity", "avionics", "safety", "certification", "attack surface"]
     },
