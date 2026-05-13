@@ -30,6 +30,10 @@
       --finance:    #0d9488; --finance-light:    #f0fdfa;
       --insurance:  #db2777; --insurance-light:  #fdf2f8;
       --brand:      #7c3aed; --brand-light:      #f5f3ff;
+
+      --sent-pos: #16a34a;
+      --sent-neu: #94a3b8;
+      --sent-neg: #dc2626;
     }
 
     body {
@@ -59,6 +63,7 @@
     }
     .brand-name { font-size: 17px; font-weight: 700; letter-spacing: -0.3px; }
     .brand-sub  { font-size: 11px; color: #94a3b8; margin-top: 1px; }
+    .header-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
     .header-badge {
       background: #1e3a5f;
       border: 1px solid #2d5a9e;
@@ -68,6 +73,24 @@
       color: #93c5fd;
       white-space: nowrap;
     }
+    .header-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+      border: 1px solid;
+      transition: opacity 0.15s;
+    }
+    .header-btn:hover { opacity: 0.85; }
+    .header-btn.run    { background: #1a3a1a; border-color: #2d6b2d; color: #86efac; }
+    .header-btn.export { background: #1a2a3a; border-color: #2d4a6b; color: #93c5fd; }
+    .header-btn.brief  { background: #2a1a3a; border-color: #5b2d8e; color: #d8b4fe; }
 
     /* ── Controls ── */
     .controls {
@@ -83,7 +106,7 @@
       padding: 12px 24px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
     .search-input {
       width: 100%;
@@ -135,14 +158,50 @@
     .filter-btn.finance.active    { background: var(--finance);    border-color: var(--finance);    color: white; }
     .filter-btn.insurance.active  { background: var(--insurance);  border-color: var(--insurance);  color: white; }
     .filter-btn.brand.active      { background: var(--brand);      border-color: var(--brand);      color: white; }
+    .filter-btn.positive.active   { background: var(--sent-pos);   border-color: var(--sent-pos);   color: white; }
+    .filter-btn.negative.active   { background: var(--sent-neg);   border-color: var(--sent-neg);   color: white; }
+    .filter-btn.starred-btn.active { background: #b45309; border-color: #b45309; color: white; }
+
+    /* ── Stats bar ── */
+    .stats-bar {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 12px 24px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .stat-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text-secondary);
+    }
+    .stat-chip .num { font-size: 13px; font-weight: 700; color: var(--text-primary); }
+    .stat-chip.new-chip { border-color: #bfdbfe; background: #eff6ff; color: #1d4ed8; }
+    .stat-chip.new-chip .num { color: #1d4ed8; }
+    .stat-chip.star-chip { border-color: #fde68a; background: #fffbeb; color: #b45309; }
+    .stat-chip.star-chip .num { color: #b45309; }
+    .stats-sep { width: 1px; height: 16px; background: var(--border); margin: 0 2px; }
+    .sent-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .sent-dot.positive { background: var(--sent-pos); }
+    .sent-dot.neutral  { background: var(--sent-neu); }
+    .sent-dot.negative { background: var(--sent-neg); }
 
     /* ── Main ── */
     .main {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 20px 24px 48px;
+      padding: 12px 24px 48px;
     }
-    .results-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; min-height: 20px; }
+    .results-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; min-height: 20px; }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -181,7 +240,13 @@
       flex-direction: column;
       gap: 8px;
     }
-    .card-tag-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .card-tag-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .card-tags-left { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
     .tag {
       font-size: 10px;
       font-weight: 700;
@@ -201,6 +266,19 @@
     .tag.insurance  { background: var(--insurance-light);  color: var(--insurance); }
     .tag.brand      { background: var(--brand-light);      color: var(--brand); }
     .tag.type       { background: #f1f5f9; color: #64748b; }
+    .tag.pt         { background: #1e3a5f; color: #93c5fd; font-size: 9px; letter-spacing: 0.6px; }
+
+    .sentiment-indicator {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .sentiment-indicator.positive { color: var(--sent-pos); }
+    .sentiment-indicator.neutral  { color: var(--sent-neu); }
+    .sentiment-indicator.negative { color: var(--sent-neg); }
 
     .card-title   { font-size: 14px; font-weight: 600; line-height: 1.45; color: var(--text-primary); }
     .card-excerpt { font-size: 13px; color: var(--text-secondary); line-height: 1.55; flex: 1; }
@@ -211,18 +289,49 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 9px 16px;
+      padding: 8px 16px;
       border-top: 1px solid var(--border);
       background: #fafbfc;
       gap: 8px;
     }
-    .card-meta { font-size: 11px; color: var(--text-muted); }
+    .card-meta { font-size: 11px; color: var(--text-muted); flex: 1; min-width: 0; }
     .card-meta strong { color: var(--text-secondary); font-weight: 600; }
+    .card-footer-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
     .card-link {
       font-size: 12px; color: #0284c7; text-decoration: none;
-      font-weight: 600; white-space: nowrap; flex-shrink: 0;
+      font-weight: 600; white-space: nowrap;
     }
     .card-link:hover { text-decoration: underline; }
+    .star-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: #cbd5e1;
+      padding: 0;
+      line-height: 1;
+      transition: color 0.15s, transform 0.1s;
+    }
+    .star-btn:hover { transform: scale(1.2); }
+    .star-btn.starred { color: #f59e0b; }
+
+    /* ── Toast ── */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(0);
+      background: #1e293b;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 999;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .toast.hidden { opacity: 0; pointer-events: none; transform: translateX(-50%) translateY(8px); }
 
     /* ── Empty / Error ── */
     .no-results { text-align: center; padding: 64px 20px; color: var(--text-muted); font-size: 15px; grid-column: 1 / -1; }
@@ -230,8 +339,9 @@
 
     @media (max-width: 640px) {
       .grid { grid-template-columns: 1fr; }
-      .controls-inner, .main { padding-left: 16px; padding-right: 16px; }
+      .controls-inner, .main, .stats-bar { padding-left: 16px; padding-right: 16px; }
       .header { padding: 12px 16px; }
+      .header-right { gap: 6px; }
     }
   </style>
 </head>
@@ -243,14 +353,12 @@
       <div class="brand-name">Social Listening Dashboard</div>
       <div class="brand-sub">Critical Software</div>
     </div>
-    <div style="display:flex;align-items:center;gap:10px">
+    <div class="header-right">
       <span class="header-badge" id="last-updated-badge">Loading...</span>
+      <button class="header-btn export" id="export-btn">&#8659; Export CSV</button>
+      <button class="header-btn brief"  id="brief-btn">&#9998; Copy Brief</button>
       <a href="https://claude.ai/code/routines/trig_014hsiuZFTdpCoMMiz5Ec3xU"
-         target="_blank" rel="noopener"
-         style="display:inline-flex;align-items:center;gap:6px;background:#1a3a1a;border:1px solid #2d6b2d;border-radius:20px;padding:4px 12px;font-size:12px;color:#86efac;text-decoration:none;white-space:nowrap"
-         title="Opens Claude.ai — click Run to trigger a fresh crawl">
-        &#8635; Run now
-      </a>
+         target="_blank" rel="noopener" class="header-btn run">&#8635; Run now</a>
     </div>
   </div>
 </header>
@@ -259,29 +367,48 @@
   <div class="controls-inner">
     <input type="text" class="search-input" id="search"
            placeholder="Search by keyword, topic, source or tag..." autocomplete="off">
+
     <div class="filter-row">
       <span class="filter-label">Domain</span>
-      <button class="filter-btn active"    data-filter="domain" data-value="all">All</button>
-      <button class="filter-btn aviation"  data-filter="domain" data-value="aviation">Aviation</button>
-      <button class="filter-btn defense"   data-filter="domain" data-value="defense">Defense</button>
-      <button class="filter-btn space"     data-filter="domain" data-value="space">Space</button>
+      <button class="filter-btn active"     data-filter="domain" data-value="all">All</button>
+      <button class="filter-btn aviation"   data-filter="domain" data-value="aviation">Aviation</button>
+      <button class="filter-btn defense"    data-filter="domain" data-value="defense">Defense</button>
+      <button class="filter-btn space"      data-filter="domain" data-value="space">Space</button>
       <button class="filter-btn automotive" data-filter="domain" data-value="automotive">Automotive</button>
-      <button class="filter-btn railway"   data-filter="domain" data-value="railway">Railway</button>
-      <button class="filter-btn medtech"   data-filter="domain" data-value="medtech">MedTech</button>
-      <button class="filter-btn energy"    data-filter="domain" data-value="energy">Energy</button>
-      <button class="filter-btn finance"   data-filter="domain" data-value="finance">Finance</button>
-      <button class="filter-btn insurance" data-filter="domain" data-value="insurance">Insurance</button>
-      <button class="filter-btn brand"     data-filter="domain" data-value="brand">Brand</button>
-      <div class="filter-sep"></div>
+      <button class="filter-btn railway"    data-filter="domain" data-value="railway">Railway</button>
+      <button class="filter-btn medtech"    data-filter="domain" data-value="medtech">MedTech</button>
+      <button class="filter-btn energy"     data-filter="domain" data-value="energy">Energy</button>
+      <button class="filter-btn finance"    data-filter="domain" data-value="finance">Finance</button>
+      <button class="filter-btn insurance"  data-filter="domain" data-value="insurance">Insurance</button>
+      <button class="filter-btn brand"      data-filter="domain" data-value="brand">Brand</button>
+    </div>
+
+    <div class="filter-row">
       <span class="filter-label">Type</span>
       <button class="filter-btn active" data-filter="type" data-value="all">All</button>
       <button class="filter-btn" data-filter="type" data-value="brand_mention">Brand Mention</button>
       <button class="filter-btn" data-filter="type" data-value="industry_trend">Trend</button>
       <button class="filter-btn" data-filter="type" data-value="industry_event">Event</button>
       <button class="filter-btn" data-filter="type" data-value="social_discussion">Social</button>
+      <button class="filter-btn" data-filter="type" data-value="competitor">Competitor</button>
+      <div class="filter-sep"></div>
+      <span class="filter-label">Sentiment</span>
+      <button class="filter-btn active"   data-filter="sentiment" data-value="all">All</button>
+      <button class="filter-btn positive" data-filter="sentiment" data-value="positive">Positive</button>
+      <button class="filter-btn"          data-filter="sentiment" data-value="neutral">Neutral</button>
+      <button class="filter-btn negative" data-filter="sentiment" data-value="negative">Negative</button>
+      <div class="filter-sep"></div>
+      <span class="filter-label">Language</span>
+      <button class="filter-btn active" data-filter="language" data-value="all">All</button>
+      <button class="filter-btn"        data-filter="language" data-value="en">EN</button>
+      <button class="filter-btn"        data-filter="language" data-value="pt">PT</button>
+      <div class="filter-sep"></div>
+      <button class="filter-btn starred-btn" data-filter="starred" data-value="toggle" id="starred-toggle">&#9733; Starred</button>
     </div>
   </div>
 </div>
+
+<div class="stats-bar" id="stats-bar"></div>
 
 <main class="main">
   <div class="results-meta" id="results-count"></div>
@@ -289,44 +416,97 @@
   <div class="no-results hidden" id="no-results">No results match your search or filters.</div>
 </main>
 
+<div class="toast hidden" id="toast"></div>
+
 <script>
   const TYPE_LABELS = {
     brand_mention:    'Brand Mention',
     industry_trend:   'Trend',
     industry_event:   'Event',
-    competitor:       'Competitor',
-    social_discussion:'Social'
+    social_discussion:'Social',
+    competitor:       'Competitor'
   };
   const DOMAIN_LABELS = {
-    aviation:   'Aviation',
-    defense:    'Defense',
-    space:      'Space',
-    automotive: 'Automotive',
-    railway:    'Railway',
-    medtech:    'MedTech',
-    energy:     'Energy',
-    finance:    'Finance',
-    insurance:  'Insurance',
-    brand:      'Brand'
+    aviation:'Aviation', defense:'Defense', space:'Space',
+    automotive:'Automotive', railway:'Railway', medtech:'MedTech',
+    energy:'Energy', finance:'Finance', insurance:'Insurance', brand:'Brand'
   };
+  const SENT_LABELS = { positive:'Positive', neutral:'Neutral', negative:'Negative' };
+  const SENT_SYMBOLS = { positive:'▲', neutral:'●', negative:'▼' };
 
-  let activeFilters = { domain: 'all', type: 'all' };
+  const STARRED_KEY = 'cs-listening-starred';
+
+  let activeFilters = { domain:'all', type:'all', sentiment:'all', language:'all' };
   let searchQuery = '';
+  let showStarredOnly = false;
+
+  /* ── helpers ── */
+
+  function getStarred() {
+    try { return new Set(JSON.parse(localStorage.getItem(STARRED_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+  function saveStarred(set) {
+    localStorage.setItem(STARRED_KEY, JSON.stringify([...set]));
+  }
+  function toggleStar(id) {
+    const s = getStarred();
+    s.has(id) ? s.delete(id) : s.add(id);
+    saveStarred(s);
+    applyFilters();
+  }
 
   function formatDate(str) {
     const d = new Date(str + 'T00:00:00');
-    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    return d.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
   }
-
   function esc(s) {
     if (!s) return '';
     return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
+  function isNewThisWeek(dateStr) {
+    return new Date(dateStr + 'T00:00:00') >= new Date(Date.now() - 7*24*60*60*1000);
+  }
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.remove('hidden');
+    clearTimeout(t._timer);
+    t._timer = setTimeout(() => t.classList.add('hidden'), 2400);
+  }
+
+  /* ── stats bar ── */
+
+  function updateStats(items) {
+    const starred = getStarred();
+    const all = window.FEED_DATA?.items || [];
+    const newThisWeek = items.filter(i => isNewThisWeek(i.date)).length;
+    const starredCount = items.filter(i => starred.has(i.id)).length;
+    const pos = items.filter(i => (i.sentiment||'neutral') === 'positive').length;
+    const neu = items.filter(i => (i.sentiment||'neutral') === 'neutral').length;
+    const neg = items.filter(i => (i.sentiment||'neutral') === 'negative').length;
+
+    document.getElementById('stats-bar').innerHTML = `
+      <div class="stat-chip"><span class="num">${items.length}</span> items</div>
+      <div class="stat-chip new-chip"><span class="num">${newThisWeek}</span> new this week</div>
+      <div class="stat-chip star-chip"><span class="num">${starredCount}</span> starred</div>
+      <div class="stats-sep"></div>
+      <div class="stat-chip"><span class="sent-dot positive"></span><span class="num">${pos}</span> positive</div>
+      <div class="stat-chip"><span class="sent-dot neutral"></span><span class="num">${neu}</span> neutral</div>
+      <div class="stat-chip"><span class="sent-dot negative"></span><span class="num">${neg}</span> negative</div>
+    `;
+  }
+
+  /* ── render cards ── */
 
   function renderCards(items) {
-    const grid   = document.getElementById('grid');
-    const noRes  = document.getElementById('no-results');
-    const count  = document.getElementById('results-count');
+    const grid  = document.getElementById('grid');
+    const noRes = document.getElementById('no-results');
+    const count = document.getElementById('results-count');
+    const starred = getStarred();
+
+    updateStats(items);
+
     if (!items.length) {
       grid.innerHTML = '';
       noRes.classList.remove('hidden');
@@ -335,64 +515,185 @@
     }
     noRes.classList.add('hidden');
     count.textContent = items.length + ' item' + (items.length !== 1 ? 's' : '');
-    grid.innerHTML = items.map(item => `
-      <article class="card">
-        <div class="card-stripe ${esc(item.domain)}"></div>
-        <div class="card-body">
-          <div class="card-tag-row">
-            <span class="tag ${esc(item.domain)}">${esc(DOMAIN_LABELS[item.domain] || item.domain)}</span>
-            <span class="tag type">${esc(TYPE_LABELS[item.type] || item.type)}</span>
+
+    grid.innerHTML = items.map(item => {
+      const sent = item.sentiment || 'neutral';
+      const lang = item.language  || 'en';
+      const isStarred = starred.has(item.id);
+      return `
+        <article class="card">
+          <div class="card-stripe ${esc(item.domain)}"></div>
+          <div class="card-body">
+            <div class="card-tag-row">
+              <div class="card-tags-left">
+                <span class="tag ${esc(item.domain)}">${esc(DOMAIN_LABELS[item.domain]||item.domain)}</span>
+                <span class="tag type">${esc(TYPE_LABELS[item.type]||item.type)}</span>
+                ${lang === 'pt' ? '<span class="tag pt">PT</span>' : ''}
+              </div>
+              <div class="sentiment-indicator ${esc(sent)}" title="${esc(SENT_LABELS[sent]||sent)}">
+                <span class="sent-dot ${esc(sent)}"></span>
+                ${esc(SENT_LABELS[sent]||sent)}
+              </div>
+            </div>
+            <div class="card-title">${esc(item.title)}</div>
+            <div class="card-excerpt">${esc(item.excerpt)}</div>
+            ${item.tags && item.tags.length ? `
+              <div class="keyword-tags">
+                ${item.tags.map(t => `<span class="keyword-tag">${esc(t)}</span>`).join('')}
+              </div>` : ''}
           </div>
-          <div class="card-title">${esc(item.title)}</div>
-          <div class="card-excerpt">${esc(item.excerpt)}</div>
-          ${item.tags && item.tags.length ? `
-            <div class="keyword-tags">
-              ${item.tags.map(t => `<span class="keyword-tag">${esc(t)}</span>`).join('')}
-            </div>` : ''}
-        </div>
-        <div class="card-footer">
-          <div class="card-meta"><strong>${esc(item.source)}</strong> &middot; ${formatDate(item.date)}</div>
-          ${item.url ? `<a class="card-link" href="${esc(item.url)}" target="_blank" rel="noopener">Read &rarr;</a>` : ''}
-        </div>
-      </article>
-    `).join('');
+          <div class="card-footer">
+            <div class="card-meta"><strong>${esc(item.source)}</strong> &middot; ${formatDate(item.date)}</div>
+            <div class="card-footer-right">
+              ${item.url ? `<a class="card-link" href="${esc(item.url)}" target="_blank" rel="noopener">Read &rarr;</a>` : ''}
+              <button class="star-btn ${isStarred?'starred':''}" onclick="toggleStar('${esc(item.id)}')" title="${isStarred?'Remove bookmark':'Bookmark'}">${isStarred?'&#9733;':'&#9734;'}</button>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
   }
+
+  /* ── filter logic ── */
 
   function applyFilters() {
     const q = searchQuery.toLowerCase();
+    const starred = getStarred();
+
     const items = (window.FEED_DATA?.items || [])
       .filter(item => {
-        if (activeFilters.domain !== 'all' && item.domain !== activeFilters.domain) return false;
-        if (activeFilters.type   !== 'all' && item.type   !== activeFilters.type)   return false;
+        if (activeFilters.domain   !== 'all' && item.domain !== activeFilters.domain) return false;
+        if (activeFilters.type     !== 'all' && item.type   !== activeFilters.type)   return false;
+        if (activeFilters.sentiment !== 'all' && (item.sentiment||'neutral') !== activeFilters.sentiment) return false;
+        if (activeFilters.language !== 'all' && (item.language||'en')       !== activeFilters.language)  return false;
+        if (showStarredOnly && !starred.has(item.id)) return false;
         if (q) {
-          const hay = [item.title, item.excerpt, item.source, ...(item.tags || [])].join(' ').toLowerCase();
+          const hay = [item.title, item.excerpt, item.source, ...(item.tags||[])].join(' ').toLowerCase();
           if (!hay.includes(q)) return false;
         }
         return true;
       })
       .sort((a, b) => new Date(b.date) - new Date(a.date));
+
     renderCards(items);
   }
+
+  /* ── export CSV ── */
+
+  function exportCSV() {
+    const q = searchQuery.toLowerCase();
+    const starred = getStarred();
+    const items = (window.FEED_DATA?.items || []).filter(item => {
+      if (activeFilters.domain    !== 'all' && item.domain !== activeFilters.domain) return false;
+      if (activeFilters.type      !== 'all' && item.type   !== activeFilters.type)   return false;
+      if (activeFilters.sentiment !== 'all' && (item.sentiment||'neutral') !== activeFilters.sentiment) return false;
+      if (activeFilters.language  !== 'all' && (item.language||'en')       !== activeFilters.language)  return false;
+      if (showStarredOnly && !starred.has(item.id)) return false;
+      if (q) {
+        const hay = [item.title, item.excerpt, item.source, ...(item.tags||[])].join(' ').toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    }).sort((a,b) => new Date(b.date) - new Date(a.date));
+
+    const cols = ['date','title','source','domain','type','sentiment','language','starred','url','tags'];
+    const rows = [cols.join(',')];
+    items.forEach(item => {
+      rows.push([
+        item.date,
+        '"' + (item.title||'').replace(/"/g,'""') + '"',
+        '"' + (item.source||'').replace(/"/g,'""') + '"',
+        item.domain||'',
+        item.type||'',
+        item.sentiment||'neutral',
+        item.language||'en',
+        starred.has(item.id) ? 'yes' : 'no',
+        '"' + (item.url||'').replace(/"/g,'""') + '"',
+        '"' + (item.tags||[]).join('; ').replace(/"/g,'""') + '"'
+      ].join(','));
+    });
+
+    const blob = new Blob([rows.join('\n')], { type:'text/csv;charset=utf-8;' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'cs-social-listening-' + new Date().toISOString().slice(0,10) + '.csv';
+    a.click();
+    showToast('CSV downloaded (' + items.length + ' items)');
+  }
+
+  /* ── content brief ── */
+
+  function copyBrief() {
+    const q = searchQuery.toLowerCase();
+    const starred = getStarred();
+    const items = (window.FEED_DATA?.items || []).filter(item => {
+      if (activeFilters.domain    !== 'all' && item.domain !== activeFilters.domain) return false;
+      if (activeFilters.type      !== 'all' && item.type   !== activeFilters.type)   return false;
+      if (activeFilters.sentiment !== 'all' && (item.sentiment||'neutral') !== activeFilters.sentiment) return false;
+      if (activeFilters.language  !== 'all' && (item.language||'en')       !== activeFilters.language)  return false;
+      if (showStarredOnly && !starred.has(item.id)) return false;
+      if (q) {
+        const hay = [item.title, item.excerpt, item.source, ...(item.tags||[])].join(' ').toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    }).sort((a,b) => new Date(b.date) - new Date(a.date)).slice(0, 10);
+
+    if (!items.length) { showToast('No items to copy'); return; }
+
+    const lines = [
+      '--- Critical Software | Social Listening Brief ---',
+      'Generated: ' + new Date().toLocaleDateString('en-GB', {day:'numeric',month:'long',year:'numeric'}),
+      '',
+      ...items.map((item, i) => [
+        `[${i+1}] ${item.title}`,
+        `     ${(DOMAIN_LABELS[item.domain]||item.domain).toUpperCase()} | ${item.source} | ${item.date} | ${SENT_LABELS[item.sentiment||'neutral']}`,
+        `     ${item.excerpt}`,
+        item.url ? `     ${item.url}` : '',
+        ''
+      ].filter(Boolean).join('\n')),
+      '---',
+      'Paste this into Claude or your content tool to generate post ideas, blog angles, or responses.'
+    ];
+
+    navigator.clipboard.writeText(lines.join('\n'))
+      .then(() => showToast('Brief copied — paste into Claude or your content tool'))
+      .catch(() => showToast('Copy failed — try again'));
+  }
+
+  /* ── event listeners ── */
 
   document.getElementById('search').addEventListener('input', e => {
     searchQuery = e.target.value.trim();
     applyFilters();
   });
 
-  document.querySelectorAll('.filter-btn').forEach(btn => {
+  document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
     btn.addEventListener('click', () => {
-      const f = btn.dataset.filter, v = btn.dataset.value;
-      activeFilters[f] = v;
-      document.querySelectorAll(`.filter-btn[data-filter="${f}"]`).forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      const v = btn.dataset.value;
+
+      if (f === 'starred') {
+        showStarredOnly = !showStarredOnly;
+        btn.classList.toggle('active', showStarredOnly);
+      } else {
+        activeFilters[f] = v;
+        document.querySelectorAll(`.filter-btn[data-filter="${f}"]`).forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
       applyFilters();
     });
   });
 
+  document.getElementById('export-btn').addEventListener('click', exportCSV);
+  document.getElementById('brief-btn').addEventListener('click', copyBrief);
+
+  /* ── init ── */
+
   function init() {
     const data = window.FEED_DATA;
     if (!data) {
-      document.getElementById('grid').innerHTML = '<p style="color:#dc2626;padding:20px;grid-column:1/-1">Error: feed.js not found. Make sure feed.js is in the same folder as index.html.</p>';
+      document.getElementById('grid').innerHTML = '<p style="color:#dc2626;padding:20px;grid-column:1/-1">Error: feed.js not found.</p>';
       return;
     }
     document.getElementById('last-updated-badge').textContent = 'Updated: ' + formatDate(data.last_updated);

@@ -11,6 +11,8 @@ window.FEED_DATA = {
       "source": "Airbus Newsroom",
       "domain": "aviation",
       "type": "brand_mention",
+      "sentiment": "positive",
+      "language": "en",
       "tags": ["Critical FlyTech", "Airbus", "joint venture", "avionics", "Portugal", "Coimbra"]
     },
     {
@@ -22,6 +24,8 @@ window.FEED_DATA = {
       "source": "Aerospace Innovations",
       "domain": "aviation",
       "type": "brand_mention",
+      "sentiment": "positive",
+      "language": "en",
       "tags": ["Critical FlyTech", "Airbus", "avionics", "certifiable software", "high-assurance"]
     },
     {
@@ -33,6 +37,8 @@ window.FEED_DATA = {
       "source": "PitchBook",
       "domain": "brand",
       "type": "brand_mention",
+      "sentiment": "positive",
+      "language": "en",
       "tags": ["acquisition", "IQ", "IT consulting", "outsourcing", "growth"]
     },
     {
@@ -44,6 +50,8 @@ window.FEED_DATA = {
       "source": "Glassdoor",
       "domain": "brand",
       "type": "brand_mention",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["employer brand", "Glassdoor", "reviews", "culture", "reputation", "salary"]
     },
     {
@@ -55,6 +63,8 @@ window.FEED_DATA = {
       "source": "The Portugal News",
       "domain": "brand",
       "type": "brand_mention",
+      "sentiment": "positive",
+      "language": "en",
       "tags": ["Portugal", "investment", "Coimbra", "aerospace", "tech hub"]
     },
     {
@@ -88,6 +98,8 @@ window.FEED_DATA = {
       "source": "Aerospace Global News",
       "domain": "aviation",
       "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["AI", "DO-178C", "certification", "avionics", "DAL", "safety", "LLM"]
     },
     {
@@ -99,6 +111,8 @@ window.FEED_DATA = {
       "source": "ePlaneAI",
       "domain": "aviation",
       "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["EASA", "AI", "regulation", "certification", "Level 1", "Level 2", "2026"]
     },
     {
@@ -143,6 +157,8 @@ window.FEED_DATA = {
       "source": "Aerospace Innovations",
       "domain": "aviation",
       "type": "industry_event",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["FAA", "EASA", "conference", "aviation safety", "AI", "autonomous", "June 2026"]
     },
     {
@@ -154,6 +170,8 @@ window.FEED_DATA = {
       "source": "Military Embedded Systems",
       "domain": "aviation",
       "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["multicore", "AMC 20-193", "EASA", "certification", "avionics", "DO-178C", "COTS"]
     },
     {
@@ -165,6 +183,8 @@ window.FEED_DATA = {
       "source": "Aerospace Innovations",
       "domain": "aviation",
       "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["DO-326B", "DO-356A", "cybersecurity", "avionics", "safety", "certification", "attack surface"]
     },
     {
@@ -198,6 +218,8 @@ window.FEED_DATA = {
       "source": "MedDeviceGuide",
       "domain": "medtech",
       "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["IEC 62304", "Edition 2", "medical device", "software lifecycle", "AI/ML", "cybersecurity", "IEC 81001-5-1", "regulation"]
     },
     {
@@ -209,6 +231,8 @@ window.FEED_DATA = {
       "source": "IntuitionLabs",
       "domain": "medtech",
       "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["IEC 62304", "AI", "AIDL", "medical device", "adaptive algorithms", "diagnostics", "regulation"]
     },
     {
@@ -220,6 +244,8 @@ window.FEED_DATA = {
       "source": "Jama Software",
       "domain": "automotive",
       "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["ISO 26262", "ISO 21434", "functional safety", "cybersecurity", "automotive", "SOTIF", "unified"]
     },
     {
@@ -231,6 +257,8 @@ window.FEED_DATA = {
       "source": "Automotive Transportation News",
       "domain": "automotive",
       "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["SDV", "software-defined vehicle", "OTA", "architecture", "AI", "safety", "automotive"]
     },
     {
@@ -242,6 +270,8 @@ window.FEED_DATA = {
       "source": "Focal Point Positioning",
       "domain": "automotive",
       "type": "industry_trend",
+      "sentiment": "positive",
+      "language": "en",
       "tags": ["ADAS", "Level 3", "eyes-off", "Rivian", "Mobileye", "EyeQ6H", "hands-free", "2026"]
     },
     {
@@ -253,6 +283,8 @@ window.FEED_DATA = {
       "source": "Automotive IQ",
       "domain": "automotive",
       "type": "industry_event",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["ISO 26262", "SOTIF", "functional safety", "event", "automotive", "conference", "2026"]
     },
     {
@@ -264,6 +296,8 @@ window.FEED_DATA = {
       "source": "LevelBlue / Trustwave",
       "domain": "energy",
       "type": "industry_trend",
+      "sentiment": "negative",
+      "language": "en",
       "tags": ["ransomware", "energy", "utilities", "cybersecurity", "OT", "phishing", "incident", "cost"]
     },
     {
@@ -275,6 +309,8 @@ window.FEED_DATA = {
       "source": "The Hacker News",
       "domain": "energy",
       "type": "industry_trend",
+      "sentiment": "negative",
+      "language": "en",
       "tags": ["OT", "operational technology", "cybersecurity", "energy", "ICS", "SCADA", "nation-state", "vulnerabilities"]
     },
     {
@@ -308,6 +344,8 @@ window.FEED_DATA = {
       "source": "World Economic Forum",
       "domain": "energy",
       "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
       "tags": ["WEF", "data centre", "resilience", "cybersecurity", "critical infrastructure", "distributed", "energy"]
     },
     {
@@ -319,6 +357,8 @@ window.FEED_DATA = {
       "source": "TTMS",
       "domain": "energy",
       "type": "industry_trend",
+      "sentiment": "negative",
+      "language": "en",
       "tags": ["AI", "cyberattack", "energy", "legacy infrastructure", "pipelines", "transmission", "nation-state"]
     },
     {
