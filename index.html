@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Listening — Critical Software</title>
+  <script src="feed.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f0f4f8;
+      --surface: #ffffff;
+      --header-bg: #0d1b2a;
+      --text-primary: #1a202c;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border: #e2e8f0;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-hover: 0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+      --radius: 8px;
+      --aerospace: #2563eb;
+      --aerospace-light: #eff6ff;
+      --automotive: #d97706;
+      --automotive-light: #fffbeb;
+      --medtech: #16a34a;
+      --medtech-light: #f0fdf4;
+      --energy: #ea580c;
+      --energy-light: #fff7ed;
+      --brand: #7c3aed;
+      --brand-light: #f5f3ff;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--header-bg);
+      color: white;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand-name {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .brand-sub {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 1px;
+    }
+    .header-badge {
+      background: #1e3a5f;
+      border: 1px solid #2d5a9e;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #93c5fd;
+      white-space: nowrap;
+    }
+
+    /* ── Controls ── */
+    .controls {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 53px;
+      z-index: 90;
+    }
+    .controls-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .search-input {
+      width: 100%;
+      padding: 9px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.15s, background 0.15s;
+      background: var(--bg);
+      color: var(--text-primary);
+    }
+    .search-input:focus { border-color: #2563eb; background: white; }
+    .search-input::placeholder { color: var(--text-muted); }
+
+    .filter-row { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+    .filter-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-right: 2px;
+    }
+    .filter-sep { width: 1px; height: 20px; background: var(--border); margin: 0 6px; }
+    .filter-btn {
+      padding: 4px 11px;
+      border-radius: 20px;
+      border: 1.5px solid var(--border);
+      background: white;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .filter-btn:hover { border-color: #94a3b8; }
+    .filter-btn.active { background: #1e293b; border-color: #1e293b; color: white; }
+    .filter-btn.aerospace.active  { background: var(--aerospace); border-color: var(--aerospace); color: white; }
+    .filter-btn.automotive.active { background: var(--automotive); border-color: var(--automotive); color: white; }
+    .filter-btn.medtech.active    { background: var(--medtech);    border-color: var(--medtech);    color: white; }
+    .filter-btn.energy.active     { background: var(--energy);     border-color: var(--energy);     color: white; }
+    .filter-btn.brand.active      { background: var(--brand);      border-color: var(--brand);      color: white; }
+
+    /* ── Main ── */
+    .main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 24px 48px;
+    }
+    .results-meta {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      min-height: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 16px;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.15s, transform 0.15s;
+      border: 1px solid var(--border);
+    }
+    .card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+
+    .card-stripe { height: 4px; }
+    .card-stripe.aerospace  { background: var(--aerospace); }
+    .card-stripe.automotive { background: var(--automotive); }
+    .card-stripe.medtech    { background: var(--medtech); }
+    .card-stripe.energy     { background: var(--energy); }
+    .card-stripe.brand      { background: var(--brand); }
+
+    .card-body {
+      padding: 14px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .card-tag-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .tag.aerospace  { background: var(--aerospace-light);  color: var(--aerospace); }
+    .tag.automotive { background: var(--automotive-light); color: var(--automotive); }
+    .tag.medtech    { background: var(--medtech-light);    color: var(--medtech); }
+    .tag.energy     { background: var(--energy-light);     color: var(--energy); }
+    .tag.brand      { background: var(--brand-light);      color: var(--brand); }
+    .tag.type       { background: #f1f5f9; color: #64748b; }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.45;
+      color: var(--text-primary);
+    }
+    .card-excerpt {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      flex: 1;
+    }
+    .keyword-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 2px; }
+    .keyword-tag {
+      font-size: 11px;
+      background: #f1f5f9;
+      color: #64748b;
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 16px;
+      border-top: 1px solid var(--border);
+      background: #fafbfc;
+      gap: 8px;
+    }
+    .card-meta { font-size: 11px; color: var(--text-muted); }
+    .card-meta strong { color: var(--text-secondary); font-weight: 600; }
+    .card-link {
+      font-size: 12px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .card-link:hover { text-decoration: underline; }
+
+    /* ── Empty / Error ── */
+    .no-results {
+      text-align: center;
+      padding: 64px 20px;
+      color: var(--text-muted);
+      font-size: 15px;
+      grid-column: 1 / -1;
+    }
+    .hidden { display: none !important; }
+
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+      .controls-inner, .main { padding-left: 16px; padding-right: 16px; }
+      .header { padding: 12px 16px; }
+      .filter-sep { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div>
+      <div class="brand-name">Social Listening Dashboard</div>
+      <div class="brand-sub">Critical Software</div>
+    </div>
+    <span class="header-badge" id="last-updated-badge">Loading...</span>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <input type="text" class="search-input" id="search"
+           placeholder="Search by keyword, topic, source or tag..." autocomplete="off">
+    <div class="filter-row">
+      <span class="filter-label">Domain</span>
+      <button class="filter-btn active"    data-filter="domain" data-value="all">All</button>
+      <button class="filter-btn aerospace" data-filter="domain" data-value="aerospace">Aerospace</button>
+      <button class="filter-btn automotive" data-filter="domain" data-value="automotive">Automotive</button>
+      <button class="filter-btn medtech"   data-filter="domain" data-value="medtech">MedTech</button>
+      <button class="filter-btn energy"    data-filter="domain" data-value="energy">Energy</button>
+      <button class="filter-btn brand"     data-filter="domain" data-value="brand">Brand</button>
+      <div class="filter-sep"></div>
+      <span class="filter-label">Type</span>
+      <button class="filter-btn active" data-filter="type" data-value="all">All</button>
+      <button class="filter-btn" data-filter="type" data-value="brand_mention">Brand Mention</button>
+      <button class="filter-btn" data-filter="type" data-value="industry_trend">Trend</button>
+      <button class="filter-btn" data-filter="type" data-value="industry_event">Event</button>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+  <div class="results-meta" id="results-count"></div>
+  <div class="grid" id="grid"></div>
+  <div class="no-results hidden" id="no-results">No results match your search or filters.</div>
+</main>
+
+<script>
+  const TYPE_LABELS = {
+    brand_mention: 'Brand Mention',
+    industry_trend: 'Trend',
+    industry_event: 'Event',
+    competitor: 'Competitor'
+  };
+  const DOMAIN_LABELS = {
+    aerospace: 'Aerospace', automotive: 'Automotive',
+    medtech: 'MedTech', energy: 'Energy', brand: 'Brand'
+  };
+
+  let activeFilters = { domain: 'all', type: 'all' };
+  let searchQuery = '';
+
+  function formatDate(str) {
+    const d = new Date(str + 'T00:00:00');
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function esc(s) {
+    if (!s) return '';
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function renderCards(items) {
+    const grid = document.getElementById('grid');
+    const noRes = document.getElementById('no-results');
+    const count = document.getElementById('results-count');
+    if (!items.length) {
+      grid.innerHTML = '';
+      noRes.classList.remove('hidden');
+      count.textContent = '';
+      return;
+    }
+    noRes.classList.add('hidden');
+    count.textContent = items.length + ' item' + (items.length !== 1 ? 's' : '');
+    grid.innerHTML = items.map(item => `
+      <article class="card">
+        <div class="card-stripe ${esc(item.domain)}"></div>
+        <div class="card-body">
+          <div class="card-tag-row">
+            <span class="tag ${esc(item.domain)}">${esc(DOMAIN_LABELS[item.domain] || item.domain)}</span>
+            <span class="tag type">${esc(TYPE_LABELS[item.type] || item.type)}</span>
+          </div>
+          <div class="card-title">${esc(item.title)}</div>
+          <div class="card-excerpt">${esc(item.excerpt)}</div>
+          ${item.tags && item.tags.length ? `
+            <div class="keyword-tags">
+              ${item.tags.map(t => `<span class="keyword-tag">${esc(t)}</span>`).join('')}
+            </div>` : ''}
+        </div>
+        <div class="card-footer">
+          <div class="card-meta"><strong>${esc(item.source)}</strong> &middot; ${formatDate(item.date)}</div>
+          ${item.url ? `<a class="card-link" href="${esc(item.url)}" target="_blank" rel="noopener">Read &rarr;</a>` : ''}
+        </div>
+      </article>
+    `).join('');
+  }
+
+  function applyFilters() {
+    const q = searchQuery.toLowerCase();
+    const items = (window.FEED_DATA?.items || [])
+      .filter(item => {
+        if (activeFilters.domain !== 'all' && item.domain !== activeFilters.domain) return false;
+        if (activeFilters.type   !== 'all' && item.type   !== activeFilters.type)   return false;
+        if (q) {
+          const hay = [item.title, item.excerpt, item.source, ...(item.tags || [])].join(' ').toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      })
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
+    renderCards(items);
+  }
+
+  document.getElementById('search').addEventListener('input', e => {
+    searchQuery = e.target.value.trim();
+    applyFilters();
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const f = btn.dataset.filter, v = btn.dataset.value;
+      activeFilters[f] = v;
+      document.querySelectorAll(`.filter-btn[data-filter="${f}"]`).forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  function init() {
+    const data = window.FEED_DATA;
+    if (!data) {
+      document.getElementById('grid').innerHTML = '<p style="color:#dc2626;padding:20px;grid-column:1/-1">Error: feed.js not found. Make sure feed.js is in the same folder as index.html.</p>';
+      return;
+    }
+    document.getElementById('last-updated-badge').textContent = 'Updated: ' + formatDate(data.last_updated);
+    applyFilters();
+  }
+
+  init();
+</script>
+</body>
+</html>
