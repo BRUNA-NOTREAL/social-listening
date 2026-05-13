@@ -1,6 +1,118 @@
 // AUTO-UPDATED WEEKLY BY CLAUDE — do not edit manually
 window.FEED_DATA = {
   "last_updated": "2026-05-13",
+  "content_ideas": [
+    {
+      "id": "idea-flytech-linkedin",
+      "generated": "2026-05-13",
+      "format": "linkedin_post",
+      "domain": "aviation",
+      "title": "What the Airbus + Critical Software Joint Venture Tells Us About the Future of Avionics Software",
+      "hook": "When Airbus decides to build a joint venture rather than just hire consultants, it means software has become genuinely strategic to their future.",
+      "angle": "Critical FlyTech isn't just a growth story for Critical Software — it's a signal that certifiable embedded software is now a core competitive asset in aerospace. Use this to position Critical Software as the partner OEMs turn to when software quality is non-negotiable.",
+      "platforms": ["LinkedIn", "Company blog"],
+      "based_on": ["cs-flytech-launch", "cs-flytech-aero-innovations"]
+    },
+    {
+      "id": "idea-stadler-railway",
+      "generated": "2026-05-13",
+      "format": "linkedin_post",
+      "domain": "railway",
+      "title": "Critical Software Is Now Inside the Trains You Ride: Meet Stadler Digital Labs",
+      "hook": "A train manufacturer and a safety-critical software company just merged their capabilities into one organisation. Here's why that matters for rail digitalisation.",
+      "angle": "Stadler Digital Labs (STADL) is the second JV Critical Software has launched in months. Highlight the pattern: hardware companies are realising they need software DNA embedded from day one, not bolted on at the end. Strong angle for railway and transportation audiences.",
+      "platforms": ["LinkedIn", "Twitter/X", "Company blog"],
+      "based_on": ["cs-stadler-digital-labs", "cs-stadler-ceo-interview"]
+    },
+    {
+      "id": "idea-iec62304-guide",
+      "generated": "2026-05-13",
+      "format": "blog_post",
+      "domain": "medtech",
+      "title": "IEC 62304 Edition 2 is Coming: What Every MedTech Software Team Needs to Do Right Now",
+      "hook": "The biggest change to medical device software standards in a decade is dropping in 2026 — and most teams aren't ready.",
+      "angle": "Break down the three key changes: goodbye to Class A/B/C, hello to AI/ML lifecycle requirements, and mandatory cybersecurity alignment. Write it as a practical checklist for software leads. This is high-search-intent content right now and positions Critical Software as a compliance guide.",
+      "platforms": ["Company blog", "LinkedIn", "Newsletter"],
+      "based_on": ["iec-62304-edition2", "iec-62304-ai-ml"]
+    },
+    {
+      "id": "idea-ai-do178c-linkedin",
+      "generated": "2026-05-13",
+      "format": "linkedin_post",
+      "domain": "aviation",
+      "title": "Can You Use AI to Write DO-178C-Certified Software? The Honest Answer.",
+      "hook": "Everyone is asking whether LLMs can help with avionics software development. The answer is: yes, but not the way you think.",
+      "angle": "Walk through the DAL hierarchy — at DAL-E you have flexibility, at DAL-A you have almost none. AI as a review assistant, a test case generator, a documentation helper — all fine. AI as a code generator in a DAL-A context — not yet. This is the nuanced take that engineers actually need.",
+      "platforms": ["LinkedIn", "Newsletter"],
+      "based_on": ["ai-do178c-debate", "easa-ai-guidance-2026"]
+    },
+    {
+      "id": "idea-iso26262-21434",
+      "generated": "2026-05-13",
+      "format": "blog_post",
+      "domain": "automotive",
+      "title": "ISO 26262 + ISO 21434: Why Automotive Safety and Cybersecurity Are Now the Same Problem",
+      "hook": "For years, safety engineers and security engineers barely talked to each other. In 2026, that separation is over.",
+      "angle": "The convergence of functional safety and cybersecurity in automotive is the defining engineering challenge of the SDV era. Write a practical piece about how to build a team and toolchain that satisfies both simultaneously. Call out SOTIF as the bridge concept. Strong lead-gen content for automotive prospects.",
+      "platforms": ["Company blog", "LinkedIn"],
+      "based_on": ["iso26262-iso21434-convergence", "sdv-software-defined-vehicle"]
+    },
+    {
+      "id": "idea-energy-ot-linkedin",
+      "generated": "2026-05-13",
+      "format": "linkedin_post",
+      "domain": "energy",
+      "title": "80% Surge in Ransomware Attacks on Energy — And Most OT Networks Are Still Unprotected",
+      "hook": "Ransomware attacks on energy and utilities surged 80% last year. The average recovery cost? $3.12 million. And most OT networks are still running unpatched systems from the 1990s.",
+      "angle": "Use the threat data to open a conversation about what Critical Software can offer: safety-critical systems expertise applied to OT security. The gap between IT security thinking and OT reality is where Critical Software's heritage is most relevant.",
+      "platforms": ["LinkedIn", "Twitter/X"],
+      "based_on": ["energy-ransomware-surge", "energy-ot-security-gaps", "energy-ai-attacks"]
+    },
+    {
+      "id": "idea-sdv-blog",
+      "generated": "2026-05-13",
+      "format": "blog_post",
+      "domain": "automotive",
+      "title": "Software-Defined Vehicles and the Safety Certification Problem Nobody Is Talking About",
+      "hook": "OTA updates are great — until you realise you've just shipped a change to a safety-critical system without a new certification cycle.",
+      "angle": "SDVs create a continuous safety assurance challenge that the industry hasn't fully solved. How do you certify software that changes in the field? This is an area where Critical Software's expertise in safety lifecycle management becomes directly relevant to automotive OEMs.",
+      "platforms": ["Company blog", "LinkedIn"],
+      "based_on": ["sdv-software-defined-vehicle", "adas-eyes-off-2026"]
+    },
+    {
+      "id": "idea-faa-easa-event",
+      "generated": "2026-05-13",
+      "format": "social_media",
+      "domain": "aviation",
+      "title": "FAA/EASA Aviation Safety Conference 2026 — What to Watch (June 16–18)",
+      "hook": "The biggest aviation safety event of 2026 is three weeks away. If you work in avionics software, these are the sessions that will shape the next three years of certification.",
+      "angle": "Timely social post ahead of the June 16–18 conference. Cover the three key themes: AI integration, autonomous systems certification, and digital methodologies. Invite followers to share what they're watching. Great for engagement.",
+      "platforms": ["LinkedIn", "Twitter/X"],
+      "based_on": ["faa-easa-safety-conference-2026"]
+    },
+    {
+      "id": "idea-railway-en50128",
+      "generated": "2026-05-13",
+      "format": "newsletter",
+      "domain": "railway",
+      "title": "Railway Software Safety is Having a Moment — Here's What's Driving It",
+      "hook": "Two major joint ventures. Growing ETCS rollout across Europe. EN 50128 updates on the horizon. Railway software safety just moved from niche to strategic.",
+      "angle": "Newsletter piece connecting Critical Software's Stadler Digital Labs JV to the broader trend of rail digitalisation. Cover EN 50128, ETCS, and what the shift to software-defined trains means for safety engineering. Perfect for a thought leadership newsletter.",
+      "platforms": ["Newsletter", "LinkedIn"],
+      "based_on": ["cs-stadler-digital-labs", "cs-stadler-ceo-interview"]
+    },
+    {
+      "id": "idea-wef-infrastructure",
+      "generated": "2026-05-13",
+      "format": "social_media",
+      "domain": "energy",
+      "title": "WEF Says Data Centres Are Reshaping Critical Infrastructure Security — We've Been Saying This for Years",
+      "hook": "The World Economic Forum just published a piece on data centre resilience and critical infrastructure. For anyone working in safety-critical systems, this should sound very familiar.",
+      "angle": "React to the WEF article with a Critical Software perspective. Position the company as ahead of this curve — you've been building resilience into critical systems for decades before it became a WEF talking point. Good for credibility and thought leadership.",
+      "platforms": ["LinkedIn", "Twitter/X"],
+      "based_on": ["wef-data-centre-resilience"]
+    }
+  ],
   "items": [
     {
       "id": "cs-flytech-launch",
