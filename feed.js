@@ -1,83 +1,83 @@
 // AUTO-UPDATED WEEKLY BY CLAUDE — do not edit manually
 window.FEED_DATA = {
-  "last_updated": "2026-06-03",
+  "last_updated": "2026-07-08",
   "content_ideas": [
     {
-      "id": "idea-eu-ai-act-omnibus-linkedin",
-      "generated": "2026-06-03",
+      "id": "idea-easa-ai-issue3-linkedin",
+      "generated": "2026-07-08",
       "format": "linkedin_post",
       "domain": "aviation",
-      "title": "The EU AI Act Just Extended Its Deadline for Safety-Critical Products — Here's What That Time Buys You",
-      "hook": "On May 7, 2026, the EU Council and Parliament quietly shifted the most consequential AI deadline for safety-critical industries: high-risk AI embedded in aviation, automotive, and medical devices now has until August 2028 to comply — not August 2027. Two years is a gift. Most teams won't use it well.",
-      "angle": "Explain the Digital Omnibus agreement's practical implications for teams building AI-enabled avionics, autonomous vehicles, and medical device software. Annex I systems (regulated safety-critical products) have until August 2028; Annex III standalone high-risk AI until December 2027. The risk is complacency — the opportunity is using the extra runway to align with EASA NPA 2025-07, EUROCAE ED-324, IEC 62304 Edition 2, and ISO 26262, building the assurance artefacts that will survive certification scrutiny now rather than at deadline pressure. Position Critical Software's safety-first methodology as exactly what forward-looking organisations should invest in during this window. Audience: avionics certification engineers, automotive safety leads, MedTech regulatory affairs, CTO-level decision makers in safety-critical product companies.",
+      "title": "EASA Just Extended Its AI Framework to Fully Autonomous Aviation — and the Industry Has Until August 12 to Shape the Rules",
+      "hook": "EASA's Proposed Concept Paper Issue 3 is the most consequential AI document the agency has ever published — because for the first time, it addresses Level 3 AI: aviation where the human operator may not be present at all. The consultation closes August 12, 2026. If you're building AI-enabled aeronautical products and you haven't read it yet, you're about to be regulated by rules you had the chance to influence.",
+      "angle": "Explain what EASA Concept Paper Issue 3 adds beyond Issue 02: reinforcement learning, symbolic AI, and Level 3 (advanced automation) applications are now in scope — covering the most complex and highest-risk AI use cases in aviation. Connect to the regulatory pipeline: Issue 03 feeds into the second NPA under RMT.0742, which will deploy the framework across specific aviation domains and into actual certification requirements. The message: this is not an academic document — it is the regulatory blueprint that will define what acceptable DO-178C + AI assurance looks like for the next decade. Critical Software's safety-by-design methodology positions it as a natural partner for organisations navigating this transition. Audience: avionics software engineers, DO-178C certification leads, aerospace OEM technical directors, regulatory affairs managers.",
       "platforms": ["LinkedIn", "Twitter/X"],
-      "based_on": ["eu-ai-act-omnibus-simplification-2026", "eurocae-ed-324-ai-aviation-2026", "easa-npa-ai-trustworthiness", "iec-62304-edition2"]
+      "based_on": ["easa-ai-concept-paper-issue3-2026", "easa-ai-olympics-2026", "eurocae-ed-324-ai-aviation-2026"]
     },
     {
-      "id": "idea-ertms-governance-crisis-blog",
-      "generated": "2026-06-03",
+      "id": "idea-ertms-cyber-blog",
+      "generated": "2026-07-08",
       "format": "blog_post",
       "domain": "railway",
-      "title": "ERTMS at a Crossroads: What Germany's Coordination Office and Finland's Alliance Model Teach Us About Scaling Railway Software",
-      "hook": "Germany just created a national ERTMS Coordination Office because fragmented governance was killing a multi-billion-euro rail digitalisation programme. Finland launched an eight-year, €24M+ engineering alliance because no single firm could deliver 970 km of digital signalling alone. The pattern is clear: ERTMS deployment is not a technology problem. It is an engineering programme management problem.",
-      "angle": "Technical and strategic analysis for railway programme managers, ERTMS deployment leads, and infrastructure operators. Cover the 10% TEN-T core network coverage gap confirmed at the Valenciennes ERTMS Conference, the governance models emerging to fix it (Germany's centralised coordination, Finland's service alliance), and the EN 50716 October 2026 transition deadline now six months away for every railway software team. Connect to Critical Software's and Stadler Digital Labs' role in delivering ETCS+STM solutions and certifiable railway software from Portugal. Audience: ERTMS programme managers, railway software engineers, EU infrastructure operators.",
+      "title": "Europe's Train Control System Has a Cybersecurity Problem — and EN 50716 Alone Cannot Fix It",
+      "hook": "A researcher at TU Munich just demonstrated that a motivated attacker can send an unauthenticated stop command to a train in service — using a known weakness in EuroRadio, a protocol baked into ERTMS since its inception. EN 50716:2023 is mandatory from October 2026. But does your railway software certification plan address cybersecurity by design — or does it still treat safety and security as separate disciplines?",
+      "angle": "Analyse the TU Munich/Fraunhofer AISEC June 2026 study in the context of the broader ERTMS deployment push: as more track is fitted with ETCS Level 2 — including Portugal's new Lisbon commuter lines — the attack surface of railway signalling software expands. Draw the connection between EN 50716's new cybersecurity provisions, ERA's ongoing concern about interoperability gaps, and the need for railway software developers to treat safety and security as co-designed properties from day one. Position Stadler Digital Labs and Critical Software's combined expertise in safety-critical railway software AND cybersecurity as the structural answer. Audience: ERTMS programme managers, railway software safety engineers, infrastructure operators, EN 50716 compliance leads.",
       "platforms": ["Company blog", "LinkedIn", "Newsletter"],
-      "based_on": ["germany-ertms-coordination-office-2026", "finland-sweco-ertms-alliance-2026", "ertms-2026-conference-valenciennes", "ertms-third-work-plan-2026", "cs-etcs-stm-portugal-2026"]
+      "based_on": ["ertms-cybersecurity-study-tum-2026", "ip-portugal-etcs-lisbon-2026", "en-50716-replaces-en-50128-deadline", "cs-etcs-stm-portugal-2026"]
     },
     {
-      "id": "idea-lotl-ot-crisis-linkedin",
-      "generated": "2026-06-03",
-      "format": "linkedin_post",
-      "domain": "energy",
-      "title": "Your Antivirus Cannot Stop This OT Attack — Because It Uses Your Own Engineering Software as the Weapon",
-      "hook": "The fastest-growing OT attack technique in 2026 does not use malware. It uses your engineering workstations, your vendor remote access tools, and your native industrial protocols. Living-off-the-land attacks in OT environments are invisible to every security tool designed for IT networks — and they are now the method of choice for nation-state actors.",
-      "angle": "Connect the living-off-the-land trend to the 2026 Iran-US conflict OT targeting (CL-STA-1128 cluster, Rockwell PLC exploitation, 60+ hacktivist groups) and the Dragos 2026 finding of a 42-day detection gap for organisations without dedicated OT monitoring. The key message: defending OT against LotL attacks requires industrial engineers who understand control system behaviour — not more cybersecurity tooling. This is where Critical Software's hybrid safety and security engineering expertise provides a unique differentiation versus pure-play cybersecurity vendors. Audience: CISOs, OT security engineers, control system operators, critical infrastructure owners.",
-      "platforms": ["LinkedIn", "Twitter/X"],
-      "based_on": ["lotl-ot-attacks-engineering-led-defense-2026", "iran-us-conflict-ot-cyberwar-2026", "dragos-ot-cybersecurity-2026-report"]
-    },
-    {
-      "id": "idea-sans-skills-gap-social",
-      "generated": "2026-06-03",
-      "format": "social_media",
-      "domain": "energy",
-      "title": "60% of CISOs Say Skills Gap Is Their #1 Problem. For OT Environments, It Is Worse — and a Different Problem Entirely.",
-      "hook": "60% of CISOs now rank the skills gap above headcount as their top workforce concern. In OT and critical infrastructure sectors, 27% of organisations have suffered a breach they trace directly to a team capability gap. This is not a hiring problem. It is a knowledge transfer and engineering culture problem.",
-      "angle": "Short, high-engagement post based on SANS 2026 workforce findings, reframing the OT skills crisis not as a recruitment problem but as a process maturity problem. The argument: organisations invested in safety-critical engineering culture, rigorous documentation, and formal verification build institutional knowledge that survives team turnover — making them inherently more resilient than those relying on individual heroics. Connect to Critical Software's engineering methodology as the structural answer to skills fragility in safety-critical OT environments. Audience: CISOs, OT security leads, engineering managers in critical infrastructure.",
-      "platforms": ["LinkedIn", "Twitter/X"],
-      "based_on": ["sans-cybersecurity-skills-crisis-2026", "lotl-ot-attacks-engineering-led-defense-2026"]
-    },
-    {
-      "id": "idea-portugal-blackout-energy-newsletter",
-      "generated": "2026-06-03",
+      "id": "idea-cs-ai-restructuring-newsletter-pt",
+      "generated": "2026-07-08",
       "format": "newsletter",
-      "domain": "energy",
-      "title": "Portugal um Ano Após o Apagão: NIS2 em Vigor, 400 Milhões na Rede — e o Que Falta Fazer nas Infraestruturas Críticas",
-      "hook": "Em abril de 2025 ficámos às escuras. Um ano depois, Portugal tem uma nova lei de cibersegurança, um plano de reforço da rede elétrica de 400 milhões, e um Conselho de Estado que colocou a segurança das infraestruturas críticas no topo da agenda estratégica nacional. Mas a diferença entre ter um plano e ter resiliência real ainda é muito larga.",
-      "angle": "Newsletter de análise para CISO, gestores de infraestruturas críticas e responsáveis de conformidade em Portugal. Balanço do primeiro ano pós-apagão: o que mudou (NIS2 em vigor desde 3 de abril, plano de 400M aprovado, reforço do CNCS), o que não mudou (fragmentação OT/IT, falta de visibilidade em activos distribuídos, dependência de sistemas legacy), e o que vem a seguir numa Europa com ameaças híbridas crescentes (conflito Irão-EUA, LotL em ambientes OT). Posicionar a Critical Software como parceiro de implementação com experiência comprovada em sistemas críticos nos sectores abrangidos pela NIS2. Audiência: CISO, CIO, responsáveis de conformidade e operadores de infraestruturas críticas em Portugal.",
+      "domain": "brand",
+      "title": "A IA Está a Remodelar as Empresas de Engenharia de Software Crítico — O Que Isso Significa para os Seus Projectos",
+      "hook": "Quando uma empresa de referência em software crítico anuncia uma reestruturação e liga as mudanças à adopção massiva de inteligência artificial, a mensagem para o mercado é clara: os modelos de operação que funcionaram durante vinte anos estão a ser substituídos. A questão relevante para os clientes não é quem está a despedir — é como garantir a continuidade e a qualidade de entrega nos seus projectos críticos.",
+      "angle": "Newsletter de análise para CTO, gestores de projecto e responsáveis de procurement em empresas que dependem de fornecedores de software crítico. Contextualizar a reestruturação no quadro mais amplo da transformação do sector: o CNCS reportou 2.326.234 ciberameaças no Q1 2026, a NIS2 abrange 6.000 entidades portuguesas, e a procura por engenharia de software certificável está em alta em aeronáutica, ferroviário e defesa. O argumento: as joint ventures Critical FlyTech, Stadler Digital Labs e Critical TechWorks — cada uma com equipas dedicadas e modelos de crescimento definidos — fornecem estabilidade estrutural independente de flutuações na empresa-mãe. Audiência: CTO, gestores de projecto, procurement de software crítico em Portugal.",
       "platforms": ["Newsletter", "LinkedIn"],
-      "based_on": ["apagao-iberico-aniversario-ciberseguranca-pt", "portugal-conselho-estado-seguranca-criticas-pt", "nis2-portugal-law-april-2026", "iran-us-conflict-ot-cyberwar-2026"]
+      "based_on": ["cs-layoffs-ai-restructuring-2026", "cncs-7th-report-ciberseguranca-2026", "cs-flytech-launch", "cs-stadler-digital-labs"]
     },
     {
-      "id": "idea-sdv-security-design-blog",
-      "generated": "2026-06-03",
-      "format": "blog_post",
-      "domain": "automotive",
-      "title": "Security by Design in Software-Defined Vehicles: Why OTA Updates Are the Biggest Safety Risk You Are Not Treating as a Safety Risk",
-      "hook": "In 2024, 46% of vehicle recalls were software-related. In 2026, a software-defined vehicle can push a faulty update to an entire fleet of a million cars simultaneously. If that update contains a vulnerability — or is itself the attack — ISO 26262 alone cannot save you.",
-      "angle": "Technical blog for automotive software engineers and OEM safety managers on why SDV architecture fundamentally changes the ISO 26262 + ISO 21434 integration challenge. Cover the OTA trust crisis (reliability now outranks cybersecurity as the biggest perceived SDV deployment barrier), the fleet-wide propagation risk of shared software components, and what security-by-design actually requires in a continuous delivery, safety-critical context. Position Critical TechWorks and Critical Software as uniquely placed at the intersection of automotive safety and security — with 150+ software products in production on BMW's Neue Klasse platform. Audience: automotive software architects, OEM safety managers, ISO 21434 leads, SDV product teams.",
-      "platforms": ["Company blog", "LinkedIn"],
-      "based_on": ["sdv-cybersecurity-fleet-risk-2026", "perforce-automotive-report-2026", "iso26262-iso21434-convergence", "critical-techworks-bmw-ix3-portugal-2026"]
-    },
-    {
-      "id": "idea-operation-epic-fury-linkedin",
-      "generated": "2026-06-03",
-      "format": "linkedin_post",
+      "id": "idea-defense-sw-lifecycle-social",
+      "generated": "2026-07-08",
+      "format": "social_media",
       "domain": "defense",
-      "title": "Operation Epic Fury Made One Thing Clear: In a Geopolitical Crisis, Your OT Infrastructure Is a Military Target",
-      "hook": "On February 28, 2026, within hours of US-Israeli strikes on Iran, more than 60 threat groups were already targeting operational technology systems across water, energy, and critical infrastructure worldwide. The 2026 Iran-US conflict is the clearest signal yet that OT security posture is no longer just a compliance question — it is a national security question.",
-      "angle": "Strategic-level post connecting Operation Epic Fury cyber escalation to the broader OT threat landscape of 2026: living-off-the-land techniques, sustained Rockwell PLC targeting, and Iran's documented shift from episodic attacks to a strategic, persistent campaign against physical infrastructure. The argument: organisations running safety-critical OT environments need both the security visibility to detect these attacks and the engineering depth to respond without triggering operational failures. Critical Software's convergence of safety-critical engineering and OT cybersecurity is the structural answer. Audience: CISO, OT security managers, critical infrastructure operators, government security advisors, defence clients.",
+      "title": "$143M to Maintain the Software on 52 Military Aircraft Through 2032. Defence Software Doesn't Retire — It Sustains.",
+      "hook": "The US Air Force just signed a $143M contract to maintain the avionics software on its C-5M Super Galaxy fleet through 2032. The aircraft entered service in 2006. That's 26 years of software lifecycle management — and counting. In defence, the real cost of safety-critical software isn't the initial certification. It's the decades of sustainment that follow.",
+      "angle": "High-engagement short post for defence engineers, acquisition programme managers, and avionics software leads. The angle: the C-5M contract illustrates why safety-critical avionics software must be engineered for maintainability from day one — because the organisations that win the sustainment contracts are the ones whose initial engineering artefacts (requirements traceability, test evidence, configuration baseline documentation) were designed to last decades. Connect to Critical Software's DO-178C and DO-326A capability and long-term programme mindset. Audience: defence programme managers, avionics software teams, government acquisition officers.",
       "platforms": ["LinkedIn", "Twitter/X"],
-      "based_on": ["iran-us-conflict-ot-cyberwar-2026", "lotl-ot-attacks-engineering-led-defense-2026", "dragos-ot-cybersecurity-2026-report", "iran-plc-attacks-us-critical-infrastructure"]
+      "based_on": ["lockheed-c5m-software-sustainment-2026", "military-avionics-ai-mosa-2026", "mosa-defense-summit-navair-2026"]
+    },
+    {
+      "id": "idea-ip-etcs-ertms-model-linkedin",
+      "generated": "2026-07-08",
+      "format": "linkedin_post",
+      "domain": "railway",
+      "title": "Portugal Just Completed 20 km of ETCS Level 2 in Lisbon — Ahead of Schedule. Here's What the STM Approach Teaches the Whole of Europe.",
+      "hook": "Infraestruturas de Portugal exceeded its NRRP rail digitalisation target ahead of schedule by deploying ETCS Level 2 on 20 km of Lisbon commuter lines — using an STM module to maintain interoperability with Portugal's legacy CONVEL system. At a moment when ERA reports only 20 of Europe's 200+ cross-border connections are ERTMS-equipped on both sides, Portugal's phased, interoperability-first approach is a template worth studying.",
+      "angle": "Technical and strategic post for railway engineers, ERTMS programme managers, and EU rail infrastructure operators. Explain how the STM-based transition architecture — proven in Portugal through Critical Software's ETCS+STM solution — allows operators to deploy ETCS Level 2 on new infrastructure while legacy rolling stock continues to operate, solving the chicken-and-egg problem that is stalling ERTMS rollout across Europe. Connect to Stadler Digital Labs' railway software expertise and Critical Software's SIL 4 certified STM development. Audience: ERTMS programme managers, railway software engineers, EU infrastructure procurement officers.",
+      "platforms": ["LinkedIn", "Newsletter"],
+      "based_on": ["ip-portugal-etcs-lisbon-2026", "cs-etcs-stm-portugal-2026", "era-railway-2026-safety-interoperability-report", "ertms-third-work-plan-2026"]
+    },
+    {
+      "id": "idea-military-mobility-railway-blog",
+      "generated": "2026-07-08",
+      "format": "blog_post",
+      "domain": "defense",
+      "title": "Europe Wants Trains to Move Tanks Across Borders. ERTMS Is the Bottleneck — and It's a Software Problem.",
+      "hook": "The EU Military Mobility Regulation is moving toward adoption in 2026. The target: a 'Military Schengen' where troops and equipment can cross EU borders without weeks of delay. But there's a fundamental obstacle at most European rail borders — you need to change the locomotive because signalling systems are incompatible. That incompatibility is, at its core, a software interoperability problem.",
+      "angle": "Strategic blog for defence programme planners, railway software engineers, and EU infrastructure policy advisors. Analyse the EU Military Mobility Package in light of ERA's 2026 report: only 20 of 200+ EU cross-border rail connections are ERTMS-equipped on both sides; fundamental differences in safety systems and signalling protocols mean locomotives cannot cross borders without manual intervention. Argue that ERTMS is no longer just a rail efficiency investment — it is a defence-critical infrastructure priority. Connect to Critical Software's dual expertise in defence software engineering and certified railway software (ETCS+STM, Stadler Digital Labs). Audience: defence procurement planners, railway software engineers, EU infrastructure policy advisors, NATO logistics planners.",
+      "platforms": ["Company blog", "LinkedIn"],
+      "based_on": ["eu-military-mobility-railway-ertms-2026", "era-railway-2026-safety-interoperability-report", "cs-etcs-stm-portugal-2026", "cs-sea-air-space-defense-2026"]
+    },
+    {
+      "id": "idea-era-ertms-interoperability-linkedin",
+      "generated": "2026-07-08",
+      "format": "linkedin_post",
+      "domain": "railway",
+      "title": "ERA's 2026 Report Is a Damning Verdict on European Rail Interoperability — and the Root Cause Is Software Certification Complexity",
+      "hook": "ERA's latest report says it plainly: European freight rail is in long-term stagnation. ERTMS coverage on TEN-T corridors is at 15%. Only 20 of 200+ cross-border connections have compatible signalling on both sides. The problem is not ambition — the EU has mandated ERTMS. The problem is that certifying, integrating, and deploying safety-critical railway software across borders is harder than anyone budgeted for.",
+      "angle": "Data-led post for railway programme managers, EU rail investors, and infrastructure operators. Use ERA's 2026 numbers to reframe the ERTMS deployment crisis not as a procurement or governance problem, but as a software certification complexity problem: multi-national SIL 4 certification, national STM variants, and the absence of a harmonised cross-border validation framework are the structural bottlenecks. Connect to what Germany's ERTMS Coordination Office, Finland's eight-year alliance model, and Portugal's STM-led phased deployment all have in common: they treat software certification complexity as a first-order constraint. Position Critical Software and Stadler Digital Labs as the engineering partners who understand this constraint from the inside. Audience: ERTMS programme managers, EU rail infrastructure investors, railway operators.",
+      "platforms": ["LinkedIn", "Twitter/X"],
+      "based_on": ["era-railway-2026-safety-interoperability-report", "eu-military-mobility-railway-ertms-2026", "germany-ertms-coordination-office-2026", "finland-sweco-ertms-alliance-2026", "cs-stadler-digital-labs"]
     }
   ],
   "items": [
@@ -132,17 +132,6 @@ window.FEED_DATA = {
       "sentiment": "neutral",
       "language": "en",
       "tags": ["EASA", "AI", "regulation", "certification", "Level 1", "Level 2", "2026"]
-    },
-    {
-      "id": "easa-npa-ai-trustworthiness",
-      "date": "2025-12-01",
-      "title": "EASA NPA 2025-07: First Regulatory Proposal on AI Trustworthiness for Aviation Open for Consultation",
-      "excerpt": "EASA's NPA 2025-07 launches the first formal rulemaking step for AI in aviation, introducing a trustworthiness framework aligned with EU AI Act obligations for high-risk AI systems in flight. A second NPA in 2026 will deploy the framework across specific aviation domains, with enforcement against Part 145, Part M, and Part CAMO audits beginning August 2026. Companies integrating AI into certifiable avionics products must begin aligning their assurance processes now.",
-      "url": "https://www.easa.europa.eu/en/newsroom-and-events/news/easas-first-regulatory-proposal-artificial-intelligence-aviation-now-open",
-      "source": "EASA",
-      "domain": "aviation",
-      "type": "industry_trend",
-      "tags": ["EASA", "AI", "NPA 2025-07", "trustworthiness", "EU AI Act", "rulemaking", "Part 145", "certification"]
     },
     {
       "id": "easa-ai-days-2026-cologne",
@@ -489,19 +478,6 @@ window.FEED_DATA = {
       "sentiment": "positive",
       "language": "en",
       "tags": ["ESA", "Hera", "space software", "autonomous navigation", "asteroid", "Didymos", "fault isolation", "ECSS", "real-time"]
-    },
-    {
-      "id": "cisa-nsa-ai-ot-guidance-2025",
-      "date": "2025-12-03",
-      "title": "CISA, NSA, and Seven Nations Publish Joint Guidance: Secure AI Integration in OT Is a Design Problem, Not a Bolt-On",
-      "excerpt": "A December 2025 joint publication by CISA, NSA, FBI, and cybersecurity agencies from Australia, Canada, Germany, the Netherlands, New Zealand, and the UK sets out four principles for secure AI integration in operational technology: Understand, Assess, Govern, and Monitor. The framework emphasises that OT safety and security must be co-designed from day one — not retrofitted — with continuous model testing and OT-specific governance frameworks required throughout the system lifecycle.",
-      "url": "https://www.cisa.gov/news-events/news/new-joint-guide-advances-secure-integration-artificial-intelligence-operational-technology",
-      "source": "CISA",
-      "domain": "energy",
-      "type": "industry_trend",
-      "sentiment": "neutral",
-      "language": "en",
-      "tags": ["CISA", "NSA", "AI", "OT", "operational technology", "ICS", "secure by design", "critical infrastructure", "guidance", "international"]
     },
     {
       "id": "ot-cyber-ai-scaled-attacks-2026",
@@ -914,6 +890,162 @@ window.FEED_DATA = {
       "sentiment": "negative",
       "language": "en",
       "tags": ["SDV", "cybersecurity", "OTA", "ISO 21434", "fleet risk", "automotive", "software-defined vehicle", "safety", "architecture", "S&P Global"]
+    },
+    {
+      "id": "cs-layoffs-ai-restructuring-2026",
+      "date": "2026-06-20",
+      "title": "Critical Software Prepara Despedimentos: Reestruturação Ligada à Adoção Massiva de IA",
+      "excerpt": "Critical Software confirmou que está a preparar uma vaga de despedimentos, num contexto de reestruturação que a empresa descreve como necessária face às transformações dos modelos de negócio associadas a novas ferramentas, incluindo a adoção massiva de inteligência artificial na organização. A empresa fechou os escritórios de Vila Real e Tomar em 2024, e a aquisição da IQ Inc. em março de 2026 poderá ter contribuído para a reorganização. As joint ventures Critical FlyTech, Stadler Digital Labs e Critical TechWorks não são afectadas.",
+      "url": "https://www.jornaldenegocios.pt/empresas/tecnologias/detalhe/critical-software-prepara-vaga-de-despedimentos",
+      "source": "Jornal de Negócios",
+      "domain": "brand",
+      "type": "brand_mention",
+      "sentiment": "negative",
+      "language": "pt",
+      "tags": ["Critical Software", "despedimentos", "reestruturação", "IA", "Portugal", "Coimbra", "workforce", "AI adoption"]
+    },
+    {
+      "id": "easa-ai-concept-paper-issue3-2026",
+      "date": "2026-07-01",
+      "title": "EASA Publishes Proposed AI Concept Paper Issue 3: Reinforcement Learning and Level 3 Autonomous Aviation Now in Scope",
+      "excerpt": "EASA released Proposed Issue 03 of its Concept Paper on Artificial Intelligence — the final deliverable under EASA AI Roadmap 2.0 — open for public consultation until August 12, 2026. Building on Issue 02's coverage of Level 1 and Level 2 AI, Issue 03 adds reinforcement learning, symbolic AI, and Level 3 applications corresponding to advanced automation where the human operator may be remotely present or absent. This feeds directly into NPA 2025-07 rulemaking affecting every organisation building AI-enabled certified aeronautical products.",
+      "url": "https://www.easa.europa.eu/en/newsroom-and-events/news/easa-releases-latest-issue-its-concept-paper-artificial-intelligence",
+      "source": "EASA",
+      "domain": "aviation",
+      "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
+      "tags": ["EASA", "AI", "Concept Paper", "Issue 3", "reinforcement learning", "Level 3", "autonomous aviation", "DO-178C", "certification", "consultation"]
+    },
+    {
+      "id": "easa-ai-olympics-2026",
+      "date": "2026-07-07",
+      "title": "EASA AI Olympics 2026 Closes with 50 Entries — Top 10 Aviation AI Cases to Present at AI Days Cologne",
+      "excerpt": "EASA's inaugural AI Olympics initiative received its maximum 50 entries and closed for submissions on July 9, 2026. The top 10 aviation AI cases selected will present at EASA AI Days (September 9–10, Cologne). The initiative offers developers a direct platform to showcase AI-based aviation systems to regulators and certification experts, bridging the gap between EASA's NPA 2025-07 rulemaking and actual industry AI deployment in certified aeronautical environments.",
+      "url": "https://www.easa.europa.eu/en/newsroom-and-events/news/easa-olympics-aviation-ai-based-systems-deadline-enter-july-9",
+      "source": "EASA",
+      "domain": "aviation",
+      "type": "industry_event",
+      "sentiment": "positive",
+      "language": "en",
+      "tags": ["EASA", "AI Olympics", "AI Days", "Cologne", "aviation AI", "certification", "NPA 2025-07", "September 2026", "industry showcase"]
+    },
+    {
+      "id": "lockheed-c5m-software-sustainment-2026",
+      "date": "2026-07-06",
+      "title": "USAF Awards Lockheed Martin $143M Software Sustainment Contract for C-5M Super Galaxy Fleet",
+      "excerpt": "The U.S. Air Force awarded Lockheed Martin a $142.9 million IDIQ contract on July 6, 2026 to sustain the software systems of its 52 C-5M Super Galaxy aircraft through May 2032. The contract covers mission-critical navigation, communications, flight instruments, and avionics software. The award underscores the lifecycle reality of safety-critical defence software: avionics systems must be actively maintained and recertified for decades after initial delivery, requiring continuous DO-178C configuration management and assurance evidence.",
+      "url": "https://www.thedefensenews.com/US-Air-Force-Awards-143-Million-C-5M-Super-Galaxy-Software-Support-Contract-to-Lockheed-Martin/",
+      "source": "The Defense News",
+      "domain": "defense",
+      "type": "industry_trend",
+      "sentiment": "positive",
+      "language": "en",
+      "tags": ["Lockheed Martin", "C-5M", "USAF", "defense software", "software sustainment", "avionics", "lifecycle", "DO-178C", "contract", "military aviation"]
+    },
+    {
+      "id": "era-railway-2026-safety-interoperability-report",
+      "date": "2026-07-03",
+      "title": "ERA 2026 Railway Report: Freight Stagnation, 15% TEN-T ERTMS Coverage, and Only 20 of 200+ Border Crossings Equipped",
+      "excerpt": "ERA's 2026 Report on Railway Safety and Interoperability confirms that European rail freight faces long-term stagnation, weak cross-border performance, and a falling modal share. ETCS deployment on European Transport Corridors reached only 15% by end-2024, while just 20 of the more than 200 cross-border rail connections in Europe have ERTMS on both sides. ERA also flags a persistently high number of TSI non-application requests constituting technical barriers to interoperability, and warns the 2030 TEN-T core network target is substantially at risk.",
+      "url": "https://www.railfreight.com/railfreight/2026/07/03/stagnation-bottlenecks-and-border-delays-the-key-freight-findings-from-eras-latest-rail-report/",
+      "source": "RailFreight.com / ERA",
+      "domain": "railway",
+      "type": "industry_trend",
+      "sentiment": "negative",
+      "language": "en",
+      "tags": ["ERA", "ERTMS", "ETCS", "railway", "freight", "TEN-T", "interoperability", "cross-border", "2026", "stagnation", "Europe"]
+    },
+    {
+      "id": "ip-portugal-etcs-lisbon-2026",
+      "date": "2026-06-30",
+      "title": "Infraestruturas de Portugal Completes 20 km ETCS Level 2 on Lisbon Ring and Northern Lines — Ahead of NRRP Schedule",
+      "excerpt": "Infraestruturas de Portugal completed the installation of 20 kilometres of ETCS Level 2 electronic signalling with STM modules on the Linha de Cintura and Linha do Norte in June 2026, covering Campolide, Oriente, Alverca, and Azambuja stations — funded through Portugal's Recovery and Resilience Plan (€478M secured to date). IP exceeded the NRRP rail digitalisation target ahead of schedule. The deployment uses the STM technology approach for Portugal's CONVEL-to-ETCS Level 2 transition and reinforces Portugal's position as a European reference for phased ERTMS interoperability.",
+      "url": "https://railwaynews.net/ip-completes-20km-etcs-level-2-on-ring-and-northern-lines.html",
+      "source": "Railway News",
+      "domain": "railway",
+      "type": "industry_trend",
+      "sentiment": "positive",
+      "language": "en",
+      "tags": ["ETCS Level 2", "Portugal", "ERTMS", "STM", "CONVEL", "Infraestruturas de Portugal", "PRR", "NRRP", "Lisbon", "railway digitalisation"]
+    },
+    {
+      "id": "ertms-cybersecurity-study-tum-2026",
+      "date": "2026-06-15",
+      "title": "TU Munich and Fraunhofer AISEC Study Warns of ERTMS Cybersecurity Risks — New EuroRadio Vulnerability Found",
+      "excerpt": "A June 2026 joint study by TUM CIT and Fraunhofer AISEC identifies legacy ERTMS components — specifically GSM-R radio communication and EuroBalise transponders — as significant cybersecurity risks in European train control. The study reveals a previously undisclosed vulnerability in EuroRadio enabling a threat actor to send unauthenticated stop commands to trains in active service. Researchers note that ETCS Level 2 and the future FRMCS system reduce some attack surface, but emphasise that railway software must now be designed with cybersecurity by default — not added retrospectively.",
+      "url": "https://railmarket.com/news/technology-innovation/59566-study-warns-of-ertms-cyber-risks",
+      "source": "RailMarket.com",
+      "domain": "railway",
+      "type": "industry_trend",
+      "sentiment": "negative",
+      "language": "en",
+      "tags": ["ERTMS", "ETCS", "cybersecurity", "GSM-R", "EuroBalise", "EuroRadio", "TU Munich", "Fraunhofer", "vulnerability", "railway safety", "FRMCS"]
+    },
+    {
+      "id": "c-days-2026-porto-cncs",
+      "date": "2026-06-16",
+      "title": "C-Days 2026 Porto: Portugal's National Cybersecurity Conference Centres on NIS2 and Sovereign Cloud",
+      "excerpt": "The 12th C-Days — the annual national cybersecurity conference organised by CNCS — took place at the Alfândega do Porto Congress Centre from June 16–18, 2026. The central theme was implementation of the new Cybersecurity Legal Framework (DL n.º 125/2025/NIS2), now applicable to approximately 6,000 Portuguese entities. The programme included sessions on sovereign cloud, Portugal's Digital Strategy 2026–2027 Action Plan, and OT/IT integration in critical infrastructure protection. Attendance was free and open to public and private sector professionals.",
+      "url": "https://digital.gov.pt/en/noticias/c-days-2026-debate-ciberseguranca-e-soberania-digital-no-porto",
+      "source": "Portugal Digital / CNCS",
+      "domain": "energy",
+      "type": "industry_event",
+      "sentiment": "neutral",
+      "language": "pt",
+      "tags": ["C-Days", "CNCS", "Portugal", "cibersegurança", "NIS2", "soberania digital", "Porto", "infraestruturas críticas", "OT", "conferência"]
+    },
+    {
+      "id": "curtiss-wright-ghs-cots-avionics-2026",
+      "date": "2026-01-13",
+      "title": "Curtiss-Wright and Green Hills Software Launch FACE-Certified RTOS Avionics COTS Platform",
+      "excerpt": "Curtiss-Wright and Green Hills Software announced on January 13, 2026 a high-performance COTS avionics computing solution combining the SOSA-aligned V3-1222 3U VPX processing module with Green Hills' FACE-certified INTEGRITY-178 tuMP real-time operating system on an Intel 13th Gen Core i7 processor. Targeting safety-critical programmes requiring certifiable multicore computing — including tactical radar, flight control computers, and digital cockpit systems — the platform delivers an off-the-shelf DAL-A certification-ready path that significantly reduces programme cost and schedule risk for civil and military avionics developers.",
+      "url": "https://www.ghs.com/news/20260113_curtiss_wright_cots_tuMP.html",
+      "source": "Green Hills Software / Military Embedded Systems",
+      "domain": "aviation",
+      "type": "industry_trend",
+      "sentiment": "positive",
+      "language": "en",
+      "tags": ["Curtiss-Wright", "Green Hills Software", "INTEGRITY-178", "FACE", "RTOS", "COTS", "VPX", "avionics", "DAL-A", "multicore", "certification"]
+    },
+    {
+      "id": "eu-military-mobility-railway-ertms-2026",
+      "date": "2026-07-06",
+      "title": "EU Military Mobility Regulation Puts Railway Interoperability in the Spotlight — ERTMS Is the Missing Link",
+      "excerpt": "As the EU Military Mobility Regulation moves toward adoption by end-2026, rail freight and defence logistics stakeholders highlight a critical gap: only 20 of the EU's 200+ cross-border rail connections have ERTMS-compatible signalling on both sides, and differences in railway safety systems force locomotive changes at every border. UNIFE and three European rail associations published a position paper welcoming the Military Mobility Package while calling for ERTMS deployment to be prioritised as dual-use defence infrastructure. A Military Mobility Digital Information System — interoperable with NATO — is also planned.",
+      "url": "https://railwaynews.net/three-rail-associations-launch-eu-military-mobility-position.html",
+      "source": "Railway News / UNIFE",
+      "domain": "defense",
+      "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
+      "tags": ["EU military mobility", "ERTMS", "ETCS", "railway", "defense", "interoperability", "NATO", "UNIFE", "cross-border", "dual-use infrastructure"]
+    },
+    {
+      "id": "alten-2025-results-competitor",
+      "date": "2026-02-15",
+      "title": "Alten 2025 Annual Results: Automotive Down 16%, Defence and Energy Accelerating — Rail Expected to Rebound in 2026",
+      "excerpt": "Alten, the French engineering services group that competes with Critical Software in aerospace, defence, and rail, reported 2025 annual results showing a sharp 16% decline in its Automotive segment, partially offset by significant growth in Defence/Security & Naval and Energy. Operating profit from ordinary activities reached €346.5M (8.5% margin). Management highlighted Civil Aeronautics, Banking/Finance, and Rail as expected to return to growth in 2026, with nuclear energy (EPR, SMR, UK HPC/SZC projects) as a structural long-term driver.",
+      "url": "https://www.alten.com/2025-annual-results/",
+      "source": "Alten",
+      "domain": "brand",
+      "type": "competitor",
+      "sentiment": "neutral",
+      "language": "en",
+      "tags": ["Alten", "competitor", "annual results", "automotive", "defense", "energy", "rail", "aerospace", "engineering services", "nuclear"]
+    },
+    {
+      "id": "cncs-7th-report-ciberseguranca-2026",
+      "date": "2026-04-30",
+      "title": "CNCS Publica 7.ª Edição do Relatório Cibersegurança em Portugal: Alta Sensibilidade, Poucos Recursos Internos",
+      "excerpt": "O Centro Nacional de Cibersegurança publicou a 7.ª edição do Relatório Cibersegurança em Portugal a 30 de abril de 2026, analisando a resiliência cibernética da sociedade portuguesa. Os resultados apontam para elevada sensibilidade das organizações face às ciberameaças mas poucos recursos internos dedicados — um paradoxo que coloca empresas e entidades públicas em risco crescente. O relatório surge quando Portugal registou 2.326.234 ciberameaças no primeiro trimestre de 2026 e a nova Lei de Cibersegurança (DL n.º 125/2025) entrou em vigor a 3 de abril.",
+      "url": "https://www.cncs.gov.pt/docs/rel-sociedade2025-obciber-cncs.pdf",
+      "source": "CNCS",
+      "domain": "energy",
+      "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "pt",
+      "tags": ["CNCS", "Portugal", "cibersegurança", "relatório", "ameaças", "resiliência", "infraestruturas críticas", "NIS2", "organizações", "2026"]
     }
   ]
 };
