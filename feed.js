@@ -1,110 +1,75 @@
 // AUTO-UPDATED WEEKLY BY CLAUDE — do not edit manually
 window.FEED_DATA = {
-  "last_updated": "2026-07-15",
+  "last_updated": "2026-07-22",
   "content_ideas": [
     {
-      "id": "idea-easa-roadmap-dal-c-linkedin",
-      "generated": "2026-07-15",
+      "id": "idea-nato-drone-defense-software-linkedin",
+      "generated": "2026-07-22",
       "format": "linkedin_post",
-      "domain": "aviation",
-      "title": "EASA's AI Roadmap 2.0 Is Complete — and It Just Set a DAL C Ceiling on Every AI Constituent in Certified Aircraft",
-      "hook": "EASA published its AI Roadmap 2.0 on July 7, 2026 — and buried inside Proposed Concept Paper Issue 3 is a constraint that will reshape every avionics AI architecture in Europe: learned AI/ML components cannot be certified above Design Assurance Level C. If you're designing an AI-enabled flight system and your architecture doesn't already account for this, it needs to be redesigned.",
-      "angle": "Explain the practical engineering consequence of the DAL C ceiling: safety-critical decisions must remain in a deterministic layer above the AI constituent, and that layer must be independently certifiable at DAL A or B. This is not a theoretical regulatory position — it is a constraint that determines which avionics AI architectures are viable and which are not. Connect to the broader picture: Issue 3 completes the Concept Paper framework covering Levels 1–3, reinforcement learning, and symbolic AI; the second NPA under RMT.0742 will lock these constraints into actual certification requirements. Critical Software's safety-by-design approach and SONNX research on formal ML verification position it as a natural partner for organisations restructuring their AI architectures for EASA compliance. Audience: avionics software architects, DO-178C certification leads, aerospace OEM technical directors.",
+      "domain": "defense",
+      "title": "NATO Just Committed $40 Billion to Counter-Drone Systems. Software-Defined Warfare Is No Longer Experimental — It's the Core Investment of the Decade.",
+      "hook": "In the first two weeks of July 2026, five of the largest defence investment decisions in recent European history converged: $40 billion for NATO's Drone Edge counter-UAS programme, a $1.8 billion raise for AI defence startup Helsing (now worth $18 billion), Germany deploying 50,000 AI-guided drones, and the US Army awarding AeroVironment a $500 million counter-drone IDIQ. Software-defined, AI-guided warfare is not a future capability — it is the core procurement category for the rest of this decade.",
+      "angle": "LinkedIn post for defence programme managers, avionics software engineers, and acquisition professionals. Frame the convergence of five simultaneous defence AI investments as a structural market shift: governments and primes are no longer piloting drone/counter-drone systems — they are procuring at scale. The thread connects procurement (AeroVironment $500M IDIQ, NATO $40B Drone Edge, Helsing $18B valuation, Germany 50K AI drones) to the engineering reality: the barrier is not hardware but verified, safety-assured autonomy software that can be certified for operational deployment. Position Critical Software's mission-critical and defence-domain software engineering heritage as directly relevant to this market. Audience: defence procurement executives, autonomy software leads, military programme managers.",
       "platforms": ["LinkedIn", "Twitter/X"],
-      "based_on": ["easa-ai-roadmap-2-0-2026", "easa-ai-dal-c-ceiling-2026", "easa-ai-concept-paper-issue3-2026", "cs-sonnx-floc-lisbon-2026"]
+      "based_on": ["nato-ankara-summit-drone-ai-2026", "europe-drone-defense-49b-wave-2026", "aerovironment-500m-counter-drone-2026", "vanderbilt-neuro-symbolic-usaf-2026"]
     },
     {
-      "id": "idea-hera-ota-space-blog",
-      "generated": "2026-07-15",
+      "id": "idea-fsb-router-ot-advisory-linkedin",
+      "generated": "2026-07-22",
+      "format": "linkedin_post",
+      "domain": "energy",
+      "title": "NSA, CISA, FBI and 12 Allied Nations Just Issued a Joint Advisory: Russia's FSB Is Stealing Router Configs From Critical Infrastructure Using a Protocol Most IT Teams Stopped Auditing Years Ago.",
+      "hook": "CISA Advisory AA26-194A (July 13, 2026): FSB Center 16 — the same unit now sanctioned by the EU for nearly blacking out half a million Polish civilians — has been exploiting default SNMP community strings and Cisco Smart Install to exfiltrate router configuration files from energy, healthcare, defence, and finance networks worldwide.",
+      "angle": "High-engagement LinkedIn post for OT security engineers, CISOs, and critical infrastructure operators. Lead with the scale and credibility of the advisory (13-nation joint statement). Explain the specific technique: default SNMP community strings ('public'/'private') allow unauthenticated configuration extraction — a trivial attack on a protocol that most IT teams last audited a decade ago. Connect to the broader 2026 European cyber sanctions context: this is the FSB unit the EU and UK jointly sanctioned. The remediation is non-negotiable and applies to any NIS2-regulated entity: migrate to SNMPv3, disable Cisco Smart Install, block UDP 69 and TCP 4786. Position this as an example of why engineering-led OT security — not perimeter tools — is the defence posture critical infrastructure operators need. Audience: CISO, OT engineers, NIS2 compliance officers, energy and finance sector security leads.",
+      "platforms": ["LinkedIn", "Twitter/X"],
+      "based_on": ["fsb-center16-router-advisory-2026", "eu-uk-russia-cyber-sanctions-2026", "lotl-ot-attacks-engineering-led-defense-2026", "cncs-regulamento-756-2026"]
+    },
+    {
+      "id": "idea-automotive-recall-iso26262-blog",
+      "generated": "2026-07-22",
+      "format": "blog_post",
+      "domain": "automotive",
+      "title": "12.1 Million Vehicles Recalled in Q1 2026. The Defect Wasn't Mechanical. This Is What Happens When Software Scales Faster Than Safety Processes.",
+      "hook": "One electrical system software defect at Ford recalled 4.3 million vehicles in Q1 2026 — 35% of all US recalls in a single campaign, from a single code flaw. And Q1 2026 set an all-time record: 12.1 million vehicles recalled overall, with software defects now the #1 recall category in the United States.",
+      "angle": "Technical blog post for automotive software engineers, ISO 26262 leads, and OEM programme managers. Use the Q1 2026 recall data as the hook and work backwards to the engineering root cause: software-defined vehicles share components across entire product lines, meaning a single defect can propagate simultaneously to millions of units. The OTA update architecture that makes SDVs commercially compelling is the same architecture that makes a single undetected defect catastrophic at scale. The post should explain: why ISO 26262 adoption declining (per the Perforce 2026 report) while SDV complexity rises is not sustainable; what a systematic safety process looks like for OTA-updated software; and what the automotive industry can learn from safety-critical software engineering domains that have addressed this for decades (avionics, railway, medical). Close with Critical Software's perspective on safety-by-design for SDV architectures. Audience: automotive software architects, functional safety leads, CTO/VPs at Tier 1 suppliers.",
+      "platforms": ["Company blog", "LinkedIn"],
+      "based_on": ["automotive-software-recall-record-q1-2026", "perforce-automotive-report-2026", "sdv-cybersecurity-fleet-risk-2026", "sdv-software-defined-vehicle"]
+    },
+    {
+      "id": "idea-nis2-cyber-sanctions-summer-2026-newsletter-pt",
+      "generated": "2026-07-22",
+      "format": "newsletter",
+      "domain": "energy",
+      "title": "O Verão de 2026 da Cibersegurança Europeia: Sanções à Rússia, Alerta CISA e o Regulamento 756/2026 — Três Desenvolvimentos que Toda a Entidade NIS2 Deve Conhecer",
+      "hook": "Na semana de 13 de julho de 2026, três eventos de cibersegurança convergem e mudam o cenário de risco para as 6.000 entidades abrangidas pela NIS2 em Portugal: a UE e o Reino Unido impõem as maiores sanções cibernéticas de sempre à Rússia; a CISA emite um alerta com 12 países aliados sobre o FSB a roubar configurações de routers de infraestruturas críticas; e o relógio do Regulamento 756/2026 continua a correr — 24 meses que já começaram.",
+      "angle": "Newsletter de síntese quinzenal para CISOs, directores IT/OT, e responsáveis de compliance em entidades essenciais e importantes em Portugal. Ligar três desenvolvimentos simultâneos: (1) as sanções conjuntas UE-UK ao FSB Center 16 e ao grupo hacktivista Z-Pentest, citando especificamente o ataque à rede eléctrica polaca; (2) o alerta AA26-194A da CISA sobre exploração de SNMP por defeito — uma vulnerabilidade directamente relevante para as redes OT das entidades essenciais portuguesas; e (3) o ponto de situação do Regulamento 756/2026: o que já é obrigatório, o que as entidades devem ter iniciado, e qual o nível de conformidade mínimo exigido na plataforma MyCiber. A mensagem: a janela de 24 meses não é margem de conforto — é o tempo máximo permitido. Audiência: CISO, directores IT/OT, responsáveis de compliance em Portugal.",
+      "platforms": ["Newsletter", "LinkedIn"],
+      "based_on": ["fsb-center16-router-advisory-2026", "eu-uk-russia-cyber-sanctions-2026", "cncs-regulamento-756-2026", "nis2-portugal-law-april-2026", "cncs-boletim-junho-2026"]
+    },
+    {
+      "id": "idea-hera-asteroid-arrival-blog",
+      "generated": "2026-07-22",
       "format": "blog_post",
       "domain": "space",
-      "title": "ESA Rebooted a Spacecraft Twice from 140 Million Kilometres to Install a Software Update. Here Is What That Teaches Every Safety Engineer.",
-      "hook": "On July 8, 2026, ESA sent a software update to the Hera spacecraft — then waited 16 minutes for the round-trip signal to complete, repeated twice as each redundant processor stream was rebooted in turn. The update was the culmination of 50 ground-test days spread across 18 months. There was no rollback option. This is what safety-critical software assurance looks like at its most demanding — and the lessons apply far beyond space.",
-      "angle": "Use the Hera mission's July 2026 deep-space software upgrade as a case study in the principles that govern all safety-critical software development: extreme verification rigour before deployment, redundant hardware streams that must each be independently validated, autonomous operation design from day one (Hera must navigate without ground contact), and the impossibility of an ad-hoc patch once in production. Draw a direct line from space software assurance (ECSS standards) to DO-178C, EN 50716, and IEC 62304 — the same principles applied to different domains. Connect to Critical Software's heritage in ESA mission software and space systems. Audience: safety-critical software engineers, technical managers across aerospace, defence, and medtech.",
+      "title": "In November 2026, ESA's Hera Will Navigate Alone, 150 Million Kilometres from Earth, With No Rollback Option. This Is What That Takes.",
+      "hook": "ESA's Hera spacecraft will descend to less than one kilometre above asteroid Dimorphos in November 2026, moving autonomously at over 12 km/s in a gravitational environment that has never been measured at close range. On July 8, mission control uploaded the software that will make this possible — after 50 ground-test days and 18 months of preparation. There is no patch. There is no rollback. If the software fails at Dimorphos, the mission fails.",
+      "angle": "Technical blog post drawing lessons from the Hera July 2026 deep-space software upgrade for safety-critical software engineers across any domain. Structure: (1) The engineering challenge — why deep-space software must be verified to a standard far beyond commercial software, and what the 50-day ground-test programme and dual-redundant reboot sequence actually represent. (2) The universality of the lessons — the same principles that make Hera's software safe (formal verification, design for autonomous operation from day one, no shortcuts on assurance evidence, hardware redundancy paired with software independence) apply identically in avionics (DO-178C), railway (EN 50716), and medical devices (IEC 62304 Edition 2). (3) The upcoming November 2026 asteroid rendezvous as the test. Connect to Critical Software's heritage in ESA mission software and the SONNX research on formally verified ML. Audience: safety-critical software engineers, space systems engineers, DO-178C/ECSS certification leads.",
       "platforms": ["Company blog", "LinkedIn"],
       "based_on": ["esa-hera-software-upgrade-2026", "esa-hera-asteroid-arrival-2026"]
     },
     {
-      "id": "idea-cs-sonnx-formal-ml-linkedin",
-      "generated": "2026-07-15",
-      "format": "linkedin_post",
-      "domain": "aviation",
-      "title": "Critical Software Is Presenting Research on Formally Verified ML Models at FLoC 2026. Why That Matters for Every Team Trying to Certify AI.",
-      "hook": "The hardest problem in AI certification is not training the model — it is proving to a certification authority that the model does exactly what the specification says it does, with no ambiguity, at any input. Critical Software's SONNX research, accepted at SAIV 2026 and OVERLAY/FLoC 2026 in Lisbon, is directly attacking this problem by defining a safety-specific ONNX profile that makes ML model behaviour formally verifiable.",
-      "angle": "Explain the gap SONNX is closing: the standard ONNX format for exchanging ML models was designed for portability, not for certification — it leaves semantic ambiguity that makes machine-checked verification impossible. SONNX extends ONNX with the formal precision needed to apply verification tools to ML model specifications, enabling the kind of machine-checked assurance that certification authorities require. Connect this to the EASA AI Roadmap 2.0 context: as regulators move toward concrete certification requirements, the absence of formally verifiable model specifications is the bottleneck. Position Critical Software's research as the bridge between academic formal methods and industrial AI certification practice. Audience: avionics AI developers, DO-178C ML supplement leads, certification engineers at aerospace OEMs.",
-      "platforms": ["LinkedIn", "Twitter/X"],
-      "based_on": ["cs-sonnx-floc-lisbon-2026", "easa-ai-roadmap-2-0-2026", "easa-ai-concept-paper-issue3-2026", "eurocae-ed-324-ai-aviation-2026"]
-    },
-    {
-      "id": "idea-thales-exail-defense-social",
-      "generated": "2026-07-15",
+      "id": "idea-sdv-recall-iso26262-social",
+      "generated": "2026-07-22",
       "format": "social_media",
-      "domain": "defense",
-      "title": "Thales Just Bet €3.9 Billion on Autonomous Underwater Drones. The Defence Market Is Consolidating Fast — and Software Is the Strategic Asset.",
-      "hook": "Thales is paying €3.9 billion for Exail's autonomous mine countermeasure drones and inertial navigation systems. That's not a hardware acquisition — it's a software capability play. The autonomous navigation stack that makes UMIS and DriX work in contested environments is exactly the kind of certified, safety-assured software that takes a decade to build.",
-      "angle": "Short, high-engagement post for defence engineers and programme managers. Frame the Thales-Exail deal as evidence of the broader consolidation trend: the largest defence primes are buying autonomous capability because it takes too long to build, and the core value is the verified, safety-assured software that enables autonomous operation in high-risk environments. Connect to the broader defence AI investment wave — Vanderbilt's $16.2M USAF neuro-symbolic AI contract, DoD MOSA mandates — and to Critical Software's position as a defence-domain software engineering partner delivering certified avionics and mission-critical systems. Audience: defence programme managers, military acquisition officers, systems integrators.",
+      "domain": "automotive",
+      "title": "One Software Bug. 4.3 Million Vehicles Recalled. SDVs Mean One Defect Can Propagate Across an Entire Product Line Simultaneously — ISO 26262 Is the Engineering Answer.",
+      "hook": "Ford's 26C10 recall in Q1 2026: one electrical software defect, 4.3 million vehicles affected, 35% of all US automotive recalls in a single campaign. Q1 2026 total: 12.1 million vehicles recalled — an all-time record. Software defects are now the #1 automotive recall category in the United States.",
+      "angle": "Short, high-engagement social post for automotive engineers, product managers, and functional safety professionals. Present the three data points (4.3M Ford vehicles, 12.1M Q1 total, software now #1 recall category) and make the systemic argument in 3–4 lines: SDVs were supposed to make vehicles safer and more updatable, but shared software architectures mean one flaw propagates instantaneously across every unit sold. The SDV paradigm makes ISO 26262 not an optional quality practice but a structural engineering requirement — the only systematic way to prevent a single code path from becoming a fleet-wide safety event. Close with a question for engagement: what does your team's functional safety baseline look like for OTA-delivered software? Audience: automotive software engineers, OEM programme managers, Tier 1 functional safety leads.",
       "platforms": ["LinkedIn", "Twitter/X"],
-      "based_on": ["thales-exail-acquisition-2026", "vanderbilt-neuro-symbolic-usaf-2026", "cs-sea-air-space-defense-2026"]
-    },
-    {
-      "id": "idea-eu-cyber-ai-plan-newsletter-pt",
-      "generated": "2026-07-15",
-      "format": "newsletter",
-      "domain": "energy",
-      "title": "A Comissão Europeia Publicou Um Plano de Acção para IA e Cibersegurança — e o Regulamento 756/2026 Activou a MyCiber. A Sua Organização Tem um Plano?",
-      "hook": "A 7 de julho de 2026, a Comissão Europeia lançou o Plano de Acção para Cibersegurança e Inteligência Artificial — nove acções concretas para proteger infraestruturas críticas da IA adversarial e construir capacidade europeia soberana em ciberdefesa. Na mesma semana, o boletim do CNCS alertou para a exposição da infraestrutura do APT28. Para as 6.000 entidades abrangidas pela NIS2 em Portugal, o período de 24 meses activado pelo Regulamento 756/2026 está a correr.",
-      "angle": "Newsletter de síntese semanal para CISOs, directores de operações, e responsáveis de cibersegurança em entidades essenciais e importantes em Portugal. Ligar três desenvolvimentos simultâneos: (1) o Plano de Acção EU que introduz testes de IA pré-implantação para operadores de infraestruturas críticas; (2) o Regulamento 756/2026 que define os três níveis de conformidade e activa a plataforma MyCiber; e (3) a ameaça persistente do APT28 que o CNCS destacou no boletim de junho. A mensagem: a janela de 24 meses parece longa, mas as entidades que atrasarem a implementação de medidas de segurança básica já estão em risco mensurável. Critical Software como parceiro de engenharia de software certificável para programas NIS2. Audiência: CISO, directores IT/OT, responsáveis de compliance em Portugal.",
-      "platforms": ["Newsletter", "LinkedIn"],
-      "based_on": ["eu-cybersecurity-ai-action-plan-2026", "cncs-regulamento-756-2026", "cncs-boletim-junho-2026", "nis2-portugal-law-april-2026"]
-    },
-    {
-      "id": "idea-neuro-symbolic-ai-defense-blog",
-      "generated": "2026-07-15",
-      "format": "blog_post",
-      "domain": "defense",
-      "title": "The US Air Force Is Funding Neuro-Symbolic AI for Military Aircraft. This Is What Assured AI Means — and Why It Changes How We Think About DO-178C.",
-      "hook": "Neural networks can recognise a target in a noisy image better than any rule-based system. But they cannot explain their decision in a way a certification authority can audit. Neuro-symbolic AI — which combines neural perception with symbolic reasoning — is the US Air Force's answer: $16.2 million to Vanderbilt University to develop AI that is both capable and verifiably safe. For everyone building safety-critical software, this contract signals where the industry is heading.",
-      "angle": "Technical blog for software safety engineers and defence acquisition managers. Explain the neuro-symbolic AI concept: the neural component handles perception and pattern recognition at DAL-equivalent lower assurance levels; the symbolic component makes decisions through formal, auditable logic that can be verified against a specification. Connect this directly to the EASA AI Concept Paper Issue 3 DAL C ceiling — neuro-symbolic architecture is one viable engineering path to keep the neural constituent at DAL C while maintaining safety-critical decision assurance above it. Position Critical Software's SONNX research on formal ML model specification as complementary work in the same design space. Audience: defence AI developers, avionics software architects, DO-178C programme managers.",
-      "platforms": ["Company blog", "LinkedIn"],
-      "based_on": ["vanderbilt-neuro-symbolic-usaf-2026", "easa-ai-dal-c-ceiling-2026", "easa-ai-concept-paper-issue3-2026", "cs-sonnx-floc-lisbon-2026"]
-    },
-    {
-      "id": "idea-easa-digital-certification-linkedin",
-      "generated": "2026-07-15",
-      "format": "linkedin_post",
-      "domain": "aviation",
-      "title": "EASA Just Switched Off Its Legacy Certification System. The Paperless Era of Airworthiness Is Here — and Your Process Needs to Adapt.",
-      "hook": "On July 14, 2026, EASA closed SEPIAC — the electronic platform that has managed Initial Airworthiness certification for years — and moved every new Type Certificate, STC, and Major Change application exclusively to its new Certification Platform. This is not a UI upgrade. It is a structural shift in how avionics software certification artefacts are submitted, tracked, and audited at the regulator level.",
-      "angle": "Post for DO-178C programme managers, DER/DMER engineers, and certification project leads. Explain what the EASA Certification Platform changes in practice: structured data replaces document submissions, workflow automation tracks review status, and integrated commenting creates a formal evidence trail directly inside the certification process. The implication: avionics teams whose software development artefacts are built to document formats and manual submission processes need to adapt their configuration management and artefact packaging to the new structured-data model. Connect to Critical Software's expertise in certification lifecycle management and DO-178C artefact engineering. Audience: DO-178C project managers, avionics OEM certification teams, DER/DAR/DMER engineers.",
-      "platforms": ["LinkedIn"],
-      "based_on": ["easa-certification-platform-2026", "easa-ai-roadmap-2-0-2026"]
-    },
-    {
-      "id": "idea-eu-cyber-ai-critical-infra-social",
-      "generated": "2026-07-15",
-      "format": "social_media",
-      "domain": "energy",
-      "title": "The EU Now Has a Plan to Test AI on Critical Infrastructure Before Deployment. The Safety-Critical Engineering Industry Just Became Indispensable.",
-      "hook": "The European Commission's new Cybersecurity and AI Action Plan (July 7) creates a secure ENISA/JRC platform so critical infrastructure operators can test AI before deploying it. For the first time, AI testing in critical systems becomes a regulatory expectation across the EU — not just a best practice.",
-      "angle": "Short post for OT engineers, critical infrastructure operators, and cybersecurity leads. Frame the EU Action Plan's AI testing platform as the moment when 'safety-by-design for AI' moves from aspiration to mandate across critical infrastructure sectors: energy, transport, water, health. Connect to the NIS2 implementing regulation active in Portugal since June 22 and the CNCS APT28 warning — the regulatory and threat contexts converge in a single week. Audience: CISO, OT security leads, critical infrastructure operators, NIS2 compliance officers.",
-      "platforms": ["LinkedIn", "Twitter/X"],
-      "based_on": ["eu-cybersecurity-ai-action-plan-2026", "cncs-boletim-junho-2026", "cncs-regulamento-756-2026"]
+      "based_on": ["automotive-software-recall-record-q1-2026", "perforce-automotive-report-2026", "sdv-cybersecurity-fleet-risk-2026"]
     }
   ],
   "items": [
-    {
-      "id": "cs-flytech-launch",
-      "date": "2026-01-15",
-      "title": "Airbus and Critical Software Launch Joint Venture: Critical FlyTech",
-      "excerpt": "Critical FlyTech has begun operations — a joint venture 51% owned by Airbus and 49% owned by Critical Software. Headquartered in Coimbra with an additional office in Lisbon, it starts with 120 employees focused on embedded software and certifiable avionics solutions, targeting 300 employees by end of 2028.",
-      "url": "https://www.airbus.com/en/newsroom/press-releases/2025-11-airbus-and-critical-software-launch-joint-venture-critical-flytech",
-      "source": "Airbus Newsroom",
-      "domain": "aviation",
-      "type": "brand_mention",
-      "sentiment": "positive",
-      "language": "en",
-      "tags": ["Critical FlyTech", "Airbus", "joint venture", "avionics", "Portugal", "Coimbra"]
-    },
     {
       "id": "cs-iq-acquisition",
       "date": "2026-03-05",
@@ -156,17 +121,6 @@ window.FEED_DATA = {
       "tags": ["EASA", "AI Days", "conference", "Cologne", "AI certification", "Concept Paper", "September 2026", "rulemaking"]
     },
     {
-      "id": "easa-epas-2026",
-      "date": "2026-01-10",
-      "title": "EASA Releases 15th Edition of European Plan for Aviation Safety (EPAS 2026)",
-      "excerpt": "EASA's 15th EPAS edition extends strategic priorities through 2026, adding three new themes: big-data technologies for safety risk management, rules simplification, and SES 2+ framework implementation. Updated Safety Risk Portfolios add new issues around in-flight fires and out-of-spec synthetic aviation fuels. The plan sets the regulatory backdrop for AI integration, autonomous systems, and digital certification methodology work across EASA and its member states.",
-      "url": "https://www.easa.europa.eu/en/newsroom-and-events/news/european-plan-aviation-safety-epas-2026",
-      "source": "EASA",
-      "domain": "aviation",
-      "type": "industry_trend",
-      "tags": ["EASA", "EPAS 2026", "aviation safety", "regulation", "big data", "SES 2+", "autonomous systems", "strategic priorities"]
-    },
-    {
       "id": "faa-easa-safety-conference-2026",
       "date": "2026-06-16",
       "title": "FAA/EASA International Aviation Safety Conference — June 2026",
@@ -191,19 +145,6 @@ window.FEED_DATA = {
       "sentiment": "neutral",
       "language": "en",
       "tags": ["multicore", "AMC 20-193", "EASA", "certification", "avionics", "DO-178C", "COTS"]
-    },
-    {
-      "id": "avionics-cybersecurity-do326",
-      "date": "2026-01-20",
-      "title": "DO-326B and DO-356A: Cybersecurity Becoming Core to Avionics Certification",
-      "excerpt": "Aircraft systems are increasingly connected to external services and use third-party software, widening the attack surface. DO-326B and DO-356A are now required alongside safety standards. The convergence of safety and security is the defining challenge in modern avionics software development.",
-      "url": "https://aerospace-innovations.com/strengthening-security-and-cyber-resilience-in-avionics-systems/",
-      "source": "Aerospace Innovations",
-      "domain": "aviation",
-      "type": "industry_trend",
-      "sentiment": "neutral",
-      "language": "en",
-      "tags": ["DO-326B", "DO-356A", "cybersecurity", "avionics", "safety", "certification", "attack surface"]
     },
     {
       "id": "military-avionics-ai-mosa-2026",
@@ -319,19 +260,6 @@ window.FEED_DATA = {
       "tags": ["ransomware", "energy", "utilities", "cybersecurity", "OT", "phishing", "incident", "cost"]
     },
     {
-      "id": "energy-ot-security-gaps",
-      "date": "2026-01-15",
-      "title": "Survey of 100+ Energy Systems Reveals Critical OT Cybersecurity Gaps",
-      "excerpt": "A StationGuard survey found critical vulnerabilities in energy OT environments within the first 30 minutes of network connection: unpatched devices, insecure external connections, weak network segmentation, and incomplete asset inventories. Nation-state actors account for 60% of critical infrastructure attacks.",
-      "url": "https://thehackernews.com/2026/01/survey-of-100-energy-systems-reveals.html",
-      "source": "The Hacker News",
-      "domain": "energy",
-      "type": "industry_trend",
-      "sentiment": "negative",
-      "language": "en",
-      "tags": ["OT", "operational technology", "cybersecurity", "energy", "ICS", "SCADA", "nation-state", "vulnerabilities"]
-    },
-    {
       "id": "poland-energy-cyberattack-cisa-2026",
       "date": "2026-02-10",
       "title": "CISA Alert: Russia-Linked Wiper Malware Destroys OT Devices in Polish Energy Sector",
@@ -389,28 +317,6 @@ window.FEED_DATA = {
       "domain": "energy",
       "type": "industry_trend",
       "tags": ["OT-ISAC", "OT", "energy", "distributed energy", "cybersecurity", "DER", "substation", "renewable energy", "threat advisory"]
-    },
-    {
-      "id": "dora-financial-operational-resilience-2026",
-      "date": "2026-01-17",
-      "title": "DORA Enters Active Enforcement Phase: EU Financial Firms Must Demonstrate ICT Resilience",
-      "excerpt": "January 17, 2026 marks one year since DORA became fully applicable, and European Supervisory Authorities are now conducting active enforcement reviews across the approximately 22,000 EU financial entities in scope. Key requirements include ICT risk management frameworks, mandatory incident-reporting timelines, and direct regulatory oversight of critical third-party technology providers including cloud platforms and software vendors. Fines reach up to 10% of annual turnover or €10 million for serious breaches — making operational resilience a board-level priority.",
-      "url": "https://vantagepoint.io/blog/sf/dora-compliance-2026-what-financial-services-firms-need-to-know-about-digital-operational-resilience",
-      "source": "Vantage Point",
-      "domain": "finance",
-      "type": "industry_trend",
-      "tags": ["DORA", "Digital Operational Resilience Act", "EU", "financial services", "compliance", "ICT risk", "third-party risk", "enforcement"]
-    },
-    {
-      "id": "insurtech-ai-dora-resilience-2026",
-      "date": "2026-01-10",
-      "title": "2026 InsurTech Predictions: AI Autopilot Claims, DORA Compliance, and the End of Legacy Tolerance",
-      "excerpt": "Industry analysts predict 2026 is the year AI-powered claims automation goes mainstream in insurance, with straight-through settlement becoming standard for simple claims and 75% faster resolution times. DORA's active enforcement phase puts insurers' ICT resilience under direct regulatory scrutiny for the first time, while high-profile cloud outages in 2025 have made multi-region design and failover planning a baseline expectation. Legacy COBOL-based policy administration systems face mounting pressure as API-first, composable architectures take hold.",
-      "url": "https://www.qover.com/blog/2026-insurtech-predictions",
-      "source": "Qover",
-      "domain": "insurance",
-      "type": "industry_trend",
-      "tags": ["insurtech", "AI", "claims automation", "DORA", "resilience", "legacy systems", "COBOL", "insurance software", "2026"]
     },
     {
       "id": "cs-viseu-new-center-2026",
@@ -489,32 +395,6 @@ window.FEED_DATA = {
       "sentiment": "positive",
       "language": "en",
       "tags": ["ESA", "Hera", "space software", "autonomous navigation", "asteroid", "Didymos", "fault isolation", "ECSS", "real-time"]
-    },
-    {
-      "id": "ot-cyber-ai-scaled-attacks-2026",
-      "date": "2026-01-10",
-      "title": "SC Media: 2026 Will Bring AI-Scaled OT Attacks, Pre-Positioning, and Supply Chain Hits",
-      "excerpt": "Security experts warn that 2026 will see AI-assisted adversaries move beyond utilities and finance to target manufacturing, healthcare, water, food, and logistics supply chain nodes. By mid-2026, more than a third of global energy and utility infrastructure will have experienced cyber pre-positioning — silent access for operational mapping and data collection ahead of future attacks. Legacy OT systems built for reliability, not security, remain the primary attack surface.",
-      "url": "https://www.scworld.com/feature/critical-infrastructure-facing-cyber-surge-in-ot-and-supply-chains-in-2026",
-      "source": "SC Media",
-      "domain": "energy",
-      "type": "industry_trend",
-      "sentiment": "negative",
-      "language": "en",
-      "tags": ["OT", "AI", "cyberattack", "pre-positioning", "supply chain", "critical infrastructure", "manufacturing", "ICS", "2026"]
-    },
-    {
-      "id": "expleo-new-ceo-cappilati-2026",
-      "date": "2026-01-12",
-      "title": "Expleo Appoints Walter Cappilati as Group CEO — Former Thales and Capgemini Leader Takes Helm",
-      "excerpt": "Expleo, the 18,000-person engineering services group and a direct competitor of Critical Software in aerospace, automotive, and defence, appointed Walter Cappilati as Group CEO on January 12, 2026. Cappilati joins from Thales Group and previously held executive roles at Capgemini across aeronautics, space, and defence. The appointment signals Expleo's intention to accelerate growth through AI-augmented engineering services and deepen its position in safety-critical domains.",
-      "url": "https://expleo.com/global/en/insights/news/walter-cappilati-ceo-lead-transformation-accelerate-growth/",
-      "source": "Expleo",
-      "domain": "brand",
-      "type": "competitor",
-      "sentiment": "neutral",
-      "language": "en",
-      "tags": ["Expleo", "competitor", "CEO", "leadership", "aerospace", "defense", "automotive", "AI engineering", "Thales", "Capgemini"]
     },
     {
       "id": "cyber-scada-nis2-amsterdam-2026",
@@ -1007,19 +887,6 @@ window.FEED_DATA = {
       "tags": ["C-Days", "CNCS", "Portugal", "cibersegurança", "NIS2", "soberania digital", "Porto", "infraestruturas críticas", "OT", "conferência"]
     },
     {
-      "id": "curtiss-wright-ghs-cots-avionics-2026",
-      "date": "2026-01-13",
-      "title": "Curtiss-Wright and Green Hills Software Launch FACE-Certified RTOS Avionics COTS Platform",
-      "excerpt": "Curtiss-Wright and Green Hills Software announced on January 13, 2026 a high-performance COTS avionics computing solution combining the SOSA-aligned V3-1222 3U VPX processing module with Green Hills' FACE-certified INTEGRITY-178 tuMP real-time operating system on an Intel 13th Gen Core i7 processor. Targeting safety-critical programmes requiring certifiable multicore computing — including tactical radar, flight control computers, and digital cockpit systems — the platform delivers an off-the-shelf DAL-A certification-ready path that significantly reduces programme cost and schedule risk for civil and military avionics developers.",
-      "url": "https://www.ghs.com/news/20260113_curtiss_wright_cots_tuMP.html",
-      "source": "Green Hills Software / Military Embedded Systems",
-      "domain": "aviation",
-      "type": "industry_trend",
-      "sentiment": "positive",
-      "language": "en",
-      "tags": ["Curtiss-Wright", "Green Hills Software", "INTEGRITY-178", "FACE", "RTOS", "COTS", "VPX", "avionics", "DAL-A", "multicore", "certification"]
-    },
-    {
       "id": "eu-military-mobility-railway-ertms-2026",
       "date": "2026-07-06",
       "title": "EU Military Mobility Regulation Puts Railway Interoperability in the Spotlight — ERTMS Is the Missing Link",
@@ -1187,6 +1054,123 @@ window.FEED_DATA = {
       "sentiment": "negative",
       "language": "pt",
       "tags": ["CNCS", "APT28", "Fancy Bear", "espionagem", "spear-phishing", "NATO", "Portugal", "cibersegurança", "MyCiber", "NIS2", "ameaças"]
+    },
+    {
+      "id": "fsb-center16-router-advisory-2026",
+      "date": "2026-07-13",
+      "title": "CISA AA26-194A: 13-Nation Advisory Warns Russia's FSB Center 16 Is Exploiting Default SNMP Strings to Steal Router Configs from Critical Infrastructure Worldwide",
+      "excerpt": "On July 13, 2026, the NSA, CISA, FBI, and cybersecurity agencies from 12 allied nations issued Advisory AA26-194A, warning that Russia's FSB Center 16 (tracked as Energetic Bear, Ghost Blizzard, Dragonfly) has been systematically exploiting default SNMP community strings and the Cisco Smart Install protocol to exfiltrate router configuration files from critical infrastructure networks across energy, defence, finance, and healthcare sectors. The group — now sanctioned by the EU for its role in sabotaging European energy infrastructure — extracts network topologies, credentials, and VPN details through unprotected devices. The advisory calls for immediate migration to SNMPv3, disabling of Cisco Smart Install, blocking of UDP 69 and TCP 4786, and regular firmware audits.",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a",
+      "source": "CISA",
+      "domain": "energy",
+      "type": "industry_trend",
+      "sentiment": "negative",
+      "language": "en",
+      "tags": ["CISA", "FSB Center 16", "Energetic Bear", "Ghost Blizzard", "SNMP", "router", "critical infrastructure", "energy", "Cisco", "advisory", "Russia", "AA26-194A"]
+    },
+    {
+      "id": "eu-uk-russia-cyber-sanctions-2026",
+      "date": "2026-07-13",
+      "title": "EU and UK Impose Largest-Ever Joint Cyber Sanctions on Russia — FSB Center 16, Z-Pentest, and GRU Officers Designated Over Energy Infrastructure Attacks",
+      "excerpt": "The EU Council and UK government jointly sanctioned nine Russian individuals and four entities on July 13, 2026, in what the EEAS described as the EU's biggest cyber sanctions package. The targets include FSB Center 16 and the pro-Russia hacktivist group Z-Pentest. The sanctions specifically cite the December 2025 attempted blackout of Poland's energy grid (nearly 500,000 people without power) and are the first coordinated EU-UK cyber sanctions action since Brexit.",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/07/13/russian-cyber-attacks-and-destabilising-activities-council-sanctions-nine-individuals-and-four-entities/",
+      "source": "Council of the EU",
+      "domain": "energy",
+      "type": "industry_trend",
+      "sentiment": "negative",
+      "language": "en",
+      "tags": ["EU sanctions", "Russia", "FSB Center 16", "Z-Pentest", "GRU", "cyberattack", "energy", "Poland", "critical infrastructure", "cyber diplomacy", "UK", "2026"]
+    },
+    {
+      "id": "aerovironment-500m-counter-drone-2026",
+      "date": "2026-07-02",
+      "title": "US Army Awards AeroVironment $500M IDIQ for Layered Counter-Drone Defense — Real-Time Autonomous Engagement Software Is the Strategic Core",
+      "excerpt": "The US Army awarded AeroVironment a $500 million indefinite-delivery indefinite-quantity contract on July 2, 2026 for its layered counter-UAS system, integrating detect, track, identify, and defeat capabilities across multiple threat tiers. The contract covers software-defined engagement logic, real-time sensor fusion, and autonomous threat prioritisation — the same engineering disciplines required for DO-178C certified safety-critical systems. AeroVironment joins a wave of defence AI software contracts in Q3 2026 including Lockheed's $143M C-5M sustainment IDIQ and Vanderbilt's $16.2M neuro-symbolic AI award.",
+      "url": "https://defensescoop.com/2026/07/02/pentagon-awards-500m-contract-aerovironment-counter-drone-technology/",
+      "source": "Defense Scoop",
+      "domain": "defense",
+      "type": "industry_trend",
+      "sentiment": "positive",
+      "language": "en",
+      "tags": ["AeroVironment", "counter-drone", "C-UAS", "US Army", "defense software", "autonomous systems", "IDIQ", "real-time", "certification", "2026"]
+    },
+    {
+      "id": "nato-ankara-summit-drone-ai-2026",
+      "date": "2026-07-08",
+      "title": "NATO Ankara Summit 2026: $40B Drone Edge Commitment and AI Security Dominate — Autonomous Defence Software Is at the Strategic Core",
+      "excerpt": "The NATO Ankara Summit (June 23–25, 2026) produced the Ankara Declaration committing allied nations to $40 billion for the NATO Drone Edge counter-UAS programme, establishing a new Drone Edge Centre of Excellence, and integrating responsible AI principles into all allied procurement for autonomous systems. The summit declared software-defined, AI-guided autonomy the primary capability investment for the alliance through 2030, directly impacting procurement requirements across all 32 member states.",
+      "url": "https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/2026/07/08/the-ankara-summit-declaration",
+      "source": "NATO",
+      "domain": "defense",
+      "type": "industry_trend",
+      "sentiment": "positive",
+      "language": "en",
+      "tags": ["NATO", "Ankara", "counter-drone", "Drone Edge", "AI", "defense software", "autonomous systems", "procurement", "transatlantic", "responsible AI", "2026"]
+    },
+    {
+      "id": "europe-drone-defense-49b-wave-2026",
+      "date": "2026-07-15",
+      "title": "Europe's AI-Guided Drone Industry Goes Mainstream: $49B in Defence Commitments in Two Weeks as Helsing Reaches $18B Valuation",
+      "excerpt": "The first two weeks of July 2026 saw an unprecedented concentration of European drone and counter-drone defence investment: NATO's $40B Drone Edge commitment, Helsing closing a $1.8B Series D at an $18B valuation, Germany deploying 50,000 AI-guided drones to Ukraine, and the UK signing its largest-ever sovereign drone manufacturing contract. AI-guided autonomous software — not the airframe — is now the primary value driver across all five programmes, with certification and verification requirements creating structural barriers to entry that favour established safety-critical engineering partners.",
+      "url": "https://www.techtimes.com/articles/320547/20260715/european-drone-warfare-goes-operational-49b-commitments-this-month.htm",
+      "source": "TechTimes",
+      "domain": "defense",
+      "type": "industry_trend",
+      "sentiment": "positive",
+      "language": "en",
+      "tags": ["defense", "drones", "AI", "Helsing", "NATO", "Germany", "Europe", "autonomous weapons", "autonomous software", "investment", "C-UAS", "2026"]
+    },
+    {
+      "id": "automotive-software-recall-record-q1-2026",
+      "date": "2026-07-15",
+      "title": "Q1 2026 Sets All-Time Record: 12.1 Million Vehicles Recalled — Software Defects Are Now the #1 Automotive Recall Category in America",
+      "excerpt": "Q1 2026 set a new all-time record for US automotive recalls: 12.1 million vehicles across 162 campaigns, with software defects overtaking mechanical failures as the single largest category for the first time in NHTSA history. Ford's 26C10 recall — 4.3 million vehicles for a single electrical software defect — accounted for 35% of all Q1 recalls by volume. The data reinforces the Perforce 2026 finding that 46% of all recalls are now software-related, and arrives as ISO 26262 adoption is declining across the industry despite SDV complexity accelerating.",
+      "url": "https://vehicle-safety.org/stories/software-recall-epidemic-record",
+      "source": "Vehicle Safety Institute",
+      "domain": "automotive",
+      "type": "industry_trend",
+      "sentiment": "negative",
+      "language": "en",
+      "tags": ["automotive", "recall", "software defect", "ISO 26262", "SOTIF", "SDV", "Ford", "OTA", "functional safety", "fleet risk", "2026"]
+    },
+    {
+      "id": "dora-active-enforcement-2026",
+      "date": "2026-07-01",
+      "title": "DORA Moves from Compliance Dialogue to Active Enforcement in 2026 — ESAs Examine Third-Party Contracts, Register of Information Quality, and CIF Classification Depth",
+      "excerpt": "Six months into the active enforcement phase of the Digital Operational Resilience Act, the European Supervisory Authorities have shifted from guidance issuance to on-site examination. Key focus areas: quality and completeness of the Register of Information (ICT third-party service provider mapping), depth of Critical ICT Third-Party classification and concentration risk assessment, and contractual provisions with cloud and software vendors. Financial entities that treated DORA as a documentation exercise rather than an operational risk transformation now face regulatory findings.",
+      "url": "https://www.regulation-dora.eu/blog/critical-ict-third-party-designations-october-2025",
+      "source": "Regulation DORA",
+      "domain": "finance",
+      "type": "industry_trend",
+      "sentiment": "neutral",
+      "language": "en",
+      "tags": ["DORA", "financial services", "ICT resilience", "enforcement", "ESAs", "third-party risk", "critical ICT", "Register of Information", "compliance", "2026"]
+    },
+    {
+      "id": "eu-ai-act-medtech-mdr-august-2026",
+      "date": "2026-07-01",
+      "title": "EU AI Act Integrated into MDR/IVDR for Medical Devices: Transparency Rules Active August 2026, High-Risk AI Compliance Deadline Extended to August 2028",
+      "excerpt": "The EU Digital Omnibus package has clarified the relationship between the EU AI Act and the Medical Device Regulation for AI-enabled medical devices. Transparency obligations for limited-risk AI in medical devices are active from August 2, 2026. High-risk AI embedded in medical devices (Annex I of the AI Act) now has until August 2, 2028 to comply — an extension from the original 2027 deadline. Manufacturers must run parallel compliance with IEC 62304 Edition 2 (expected August 2026), MDR/IVDR, and the AI Act simultaneously, with the AI Act introducing additional post-market surveillance and transparency obligations beyond the existing MDR framework.",
+      "url": "https://meddeviceguide.com/blog/eu-ai-act-medical-device-august-2028-deadline-dual-mdr-compliance-guide",
+      "source": "MedDeviceGuide",
+      "domain": "medtech",
+      "type": "industry_trend",
+      "sentiment": "positive",
+      "language": "en",
+      "tags": ["EU AI Act", "MDR", "IVDR", "medical device", "AI compliance", "IEC 62304", "August 2028", "transparency", "MedTech", "Digital Omnibus", "SaMD"]
+    },
+    {
+      "id": "thales-alenia-space-lisa-esa-2026",
+      "date": "2026-05-05",
+      "title": "Thales Alenia Space Signs €26.1M ESA Contract for LISA Gravitational Wave Observatory Telescopes — Avionics and Control Software Already Under Contract",
+      "excerpt": "Thales Alenia Space signed a Phase 1 contract with ESA worth €26.1 million for the development of the three telescope assemblies aboard the LISA (Laser Interferometer Space Antenna) gravitational wave observatory, scheduled for launch in 2035. The telescopes will detect gravitational waves by measuring picometric variations in laser paths across three spacecraft flying in triangular formation 2.5 million kilometres apart. Avionics, formation-flying control software, and attitude determination are already under separate contract, making LISA one of the most software-critical ESA science missions currently in development.",
+      "url": "https://www.thalesaleniaspace.com/en/press-releases/thales-alenia-space-signs-phase-1-contract-esa-development-telescopes-onboard-lisa",
+      "source": "Thales Alenia Space",
+      "domain": "space",
+      "type": "competitor",
+      "sentiment": "neutral",
+      "language": "en",
+      "tags": ["Thales Alenia Space", "LISA", "ESA", "gravitational wave", "avionics", "space software", "attitude control", "formation flying", "ECSS", "competitor", "OHB"]
     }
   ]
 };
